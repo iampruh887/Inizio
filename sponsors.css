@@ -92,8 +92,8 @@ body {
 }
 
 #banner {
-   /* background-color: #ff6b00; */
-   background-image: url('assets/back.jpg');
+   background-color: #ff6b00;
+   background-image: url('assets/bg.svg');
    background-size: cover;
    display: flex;
    justify-content: center;
