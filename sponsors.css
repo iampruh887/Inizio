@@ -33,7 +33,7 @@
 body {
    font-family: lexendregular, Arial, Helvetica;
    position: relative;
-   background-color: #000000;
+   background-color: #131313;
 }
 
 #navbar {
@@ -207,7 +207,7 @@ body {
 #footer {
    bottom: 50px;
    background-color: #131313;
-   padding-top: 80px;
+   padding: 20px;
 }
 
 #foot-container {
@@ -218,11 +218,11 @@ body {
    align-items: top;
    color: #ffffff;
    font-family: lexendRegular, sans-serif;
+   margin: 120px 0px;
 }
 
 #logo-box {
    width: auto;
-   max-width: 30%;
 }
 
 #logo-box>div {
@@ -244,8 +244,8 @@ body {
    background-image: url('assets/logo-white.svg');
    background-repeat: no-repeat;
    background-size: contain;
-   width: 120px;
-   height: 80px;
+   width: 150px;
+   height: 100px;
 }
 
 #logo-des {
@@ -254,7 +254,6 @@ body {
    font-weight: 600;
    letter-spacing: 1px;
    font-size: 1.2rem;
-   white-space: nowrap;
    line-height: 30px;
    margin: 15px 0px;
 }
@@ -263,7 +262,6 @@ body {
    display: flex;
    justify-content: center;
    color: #ffffff;
-   max-width: 60%;
 }
 
 #foot-text>div {
@@ -285,7 +283,7 @@ body {
    font-family: Arial, Helvetica, sans-serif;
    font-weight: 400;
    letter-spacing: 1px;
-   font-size: 1.4rem;
+   font-size: 1.45rem;
    margin: 15px 0px;
 }
 
@@ -304,10 +302,11 @@ body {
 }
 
 .copyright {
+   color: #ffffff;
    text-align: center;
    font-family: Arial, Helvetica, sans-serif;
    font-weight: 100 !important;
    letter-spacing: 1px;
-   font-size: 1.5em;
+   font-size: 1.4em;
    margin: 20px 0px;
 }
