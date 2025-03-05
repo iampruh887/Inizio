@@ -60,8 +60,8 @@ body {
 }
 
 .logo {
-   height: 70px;
-   width: 80px;
+   height: 90px;
+   width: 100px;
    margin-left: 5vw;
 }
 
@@ -229,12 +229,13 @@ body {
 
 .f-logo-box {
    width: auto;
-   margin: 120px 0px;
+   margin: 90px 0px;
 }
 
 .f-logo-box>div {
    display: flex;
    justify-content: space-around;
+   flex-wrap: wrap;
    align-items: center;
    padding: 10px 20px;
 }
@@ -245,6 +246,7 @@ body {
    background-repeat: no-repeat;
    height: 160px;
    width: 160px;
+   margin: 30px 0px;
 }
 
 .foot-logo {
@@ -253,6 +255,7 @@ body {
    background-size: contain;
    width: 150px;
    height: 100px;
+   margin: 30px 0px;
 }
 
 .logo-des {
@@ -268,12 +271,13 @@ body {
 .foot-text {
    display: flex;
    justify-content: center;
+   flex-wrap: wrap;
    color: #ffffff;
-   margin: 120px 0px;
+   margin: 90px 0px;
 }
 
 .foot-text>div {
-   margin: 0px 20px;
+   margin: 30px 20px;
    text-align: center;
 }
 
@@ -296,6 +300,7 @@ body {
 .icons {
    display: flex;
    justify-content: center;
+   flex-wrap: wrap;
    align-items: center;
    margin: 20px 0px;
 }
@@ -314,4 +319,30 @@ body {
    letter-spacing: 1px;
    font-size: 1.45em;
    margin: 20px 0px;
+}
+
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 576px) {
+
+}
+
+/* Small Devices (Tablets, Large Phones) */
+@media (min-width: 577px) and (max-width: 768px) {
+   /* Styles for tablets and large phones */
+}
+
+/* Medium Devices (Laptops, Small Desktops) */
+@media (min-width: 769px) and (max-width: 992px) {
+   /* Styles for laptops */
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 993px) and (max-width: 1200px) {
+   /* Styles for large desktops */
+}
+
+/* Extra Large Devices (Large Screens, TVs) */
+@media (min-width: 1201px) {
+   /* Styles for very large screens */
 }
