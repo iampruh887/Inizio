@@ -222,7 +222,7 @@ body {
 
 #logo-box {
    width: auto;
-
+   max-width: 30%;
 }
 
 #logo-box>div {
@@ -250,12 +250,20 @@ body {
 
 #logo-des {
    text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 600;
+   letter-spacing: 1px;
+   font-size: 1.2rem;
+   white-space: nowrap;
+   line-height: 30px;
+   margin: 15px 0px;
 }
 
 #foot-text {
    display: flex;
    justify-content: center;
    color: #ffffff;
+   max-width: 60%;
 }
 
 #foot-text>div {
