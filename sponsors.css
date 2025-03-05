@@ -90,7 +90,7 @@ body {
    width: 100%;
    height: 100%;
    background-color: rgba(0, 0, 0, 0.75);
-   display: none;
+
 }
 
 .nav-hid {
@@ -98,26 +98,73 @@ body {
    z-index: 25;
    right: 0px;
    background-color: rgba(255, 107, 0, 0.7);
-   width: 50vw;
-   height: 70vh;
-   border-radius: 0px 0px 0px 25px;
+   width: 40vw;
+   height: 100vh;
    text-align: center;
-   display: none;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 
 .side-nav {
-   margin: 100px 10px 10px
+   margin: 50px 10px 10px;
+   padding-top: 20px;
 }
 
-.side-nav>h3 {
-   margin: 10px;
+.tri {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: end;
+}
+
+.left-tri {
+   width: 40%;
+   background-color: rgba(255, 165, 101, 0.7);
+   height: 60%;
+   clip-path: polygon(0 0, 100% 100%, 0 100%);
+   background: linear-gradient(90deg, rgba(255, 143, 63, 0.2), rgba(255, 107, 0, 0.3));
+}
+
+.right-tri {
+   width: 60%;
+   height: 100%;
+   clip-path: polygon(100% 0, 100% 100%, 0 100%);
+   background: linear-gradient(90deg, rgba(255, 121, 25, 0.1), rgba(255, 150, 3, 0.2));
+}
+
+.triangle {
+   width: 200px;
+   aspect-ratio: 1;
+   clip-path: polygon(0 0, 100% 100%, 0 100%);
+   background: linear-gradient(90deg, red, lightblue);
+}
+
+.mob-tab {
+   position: relative;
+   top: 20px;
+}
+
+.side-nav>div>h3 {
+   margin-top: 20px;
+   font-family: RobotoRegular, sans-serif;
+   font-size: 1.3rem;
+   letter-spacing: 1px;
 
 }
 
 .mob-link {
    text-decoration: none;
    color: #ffffff;
-   ;
+}
+
+.cross {
+   text-align: center;
+   font-size: 40px;
+   color: #ffffff;
+   position: relative;
+   bottom: -100px;
 }
 
 .logo {
@@ -131,12 +178,6 @@ body {
    height: 90px;
    width: 100px;
 }
-
-/* 
-.logo>div {
-   width: 100px;
-   height: 90px;
-} */
 
 .gear {
    position: relative;
