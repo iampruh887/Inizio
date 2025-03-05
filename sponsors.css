@@ -225,11 +225,11 @@ body {
    align-items: top;
    color: #ffffff;
    font-family: lexendRegular, sans-serif;
-   margin: 120px 0px;
 }
 
 .f-logo-box {
    width: auto;
+   margin: 120px 0px;
 }
 
 .f-logo-box>div {
@@ -243,8 +243,8 @@ body {
    background-image: url('assets/gear.png');
    background-size: contain;
    background-repeat: no-repeat;
-   height: 150px;
-   width: 150px;
+   height: 160px;
+   width: 160px;
 }
 
 .foot-logo {
@@ -269,6 +269,7 @@ body {
    display: flex;
    justify-content: center;
    color: #ffffff;
+   margin: 120px 0px;
 }
 
 .foot-text>div {
