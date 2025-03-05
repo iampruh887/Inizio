@@ -11,22 +11,29 @@
 
 @font-face {
    font-family: 'LexendExtraBold';
-   src: url('assets/Lexend/static/Lexend-ExtraBold.ttf') format('truetype');
+   src: url('assets/fonts/Lexend-ExtraBold.ttf') format('truetype');
    font-weight: 800;
    font-style: normal;
 }
 
 @font-face {
    font-family: 'LexendBold';
-   src: url('assets/Lexend/static/Lexend-Bold.ttf') format('truetype');
+   src: url('assets/fonts/Lexend-Bold.ttf') format('truetype');
    font-weight: 600;
    font-style: normal;
 }
 
 @font-face {
    font-family: 'LexendRegular';
-   src: url('assets/Lexend/static/Lexend-Regular.ttf') format('truetype');
+   src: url('assets/fonts/Lexend-Regular.ttf') format('truetype');
    font-weight: 400;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'RobotoThin';
+   src: url('assets/fonts/Roboto-Thin.ttf') format('truetype');
+   font-weight: 100;
    font-style: normal;
 }
 
@@ -36,7 +43,7 @@ body {
    background-color: #131313;
 }
 
-#navbar {
+.navbar {
    padding-top: 20px;
    position: fixed;
    width: 100%;
@@ -44,7 +51,7 @@ body {
    z-index: 10;
 }
 
-#nav-tab {
+.nav-tab {
    display: flex;
    justify-content: space-around;
    flex-wrap: wrap;
@@ -52,18 +59,18 @@ body {
    height: 100%;
 }
 
-#logo {
+.logo {
    height: 70px;
    width: 80px;
    margin-left: 5vw;
 }
 
-#logo>img {
+.logo>img {
    height: 100%;
    width: 100%;
 }
 
-#gear {
+.gear {
    background-size: cover;
    height: 36px;
    width: 36px;
@@ -71,12 +78,12 @@ body {
    top: -10px;
 }
 
-#gear>img {
+.gear>img {
    height: 100%;
    width: 100%;
 }
 
-#nav-tab>h3>a {
+.nav-tab>h3>a {
    font-family: sans-serif;
    font-size: 1.1rem;
    color: #fff;
@@ -86,12 +93,12 @@ body {
    margin: 0px 10px;
 }
 
-#nav-tab>h3>a:hover {
+.nav-tab>h3>a:hover {
    font-size: 1.2rem;
    transition: all 0.2s ease-in-out;
 }
 
-#banner {
+.banner {
    background-color: #ff6b00;
    background-image: url('assets/bg.svg');
    background-size: cover;
@@ -102,7 +109,7 @@ body {
    width: 100%;
 }
 
-#banner>div {
+.banner>div {
    display: flex;
    flex-direction: column;
    text-align: center;
@@ -110,13 +117,13 @@ body {
 
 }
 
-#sponsors {
+.title-text {
    font-size: 10vw;
    font-family: LexendExtraBold, sans-serif;
    color: #fff5cf;
 }
 
-#sponsors+div>p {
+.title-text+div>p {
    font-family: sans-serif;
    font-size: 1rem;
    color: #fff5cf;
@@ -134,7 +141,7 @@ body {
    bottom: 25px;
 }
 
-#container {
+.body-content {
    /* background-color: #ff6b00; */
    width: 100%;
    position: relative;
@@ -204,13 +211,13 @@ body {
 }
 
 
-#footer {
+.footer {
    bottom: 50px;
    background-color: #131313;
    padding: 20px;
 }
 
-#foot-container {
+.foot-content {
    width: 100%;
    display: flex;
    justify-content: space-around;
@@ -221,18 +228,18 @@ body {
    margin: 120px 0px;
 }
 
-#logo-box {
+.f-logo-box {
    width: auto;
 }
 
-#logo-box>div {
+.f-logo-box>div {
    display: flex;
    justify-content: space-around;
    align-items: center;
    padding: 10px 20px;
 }
 
-#foot-gear {
+.foot-gear {
    background-image: url('assets/gear.png');
    background-size: contain;
    background-repeat: no-repeat;
@@ -240,7 +247,7 @@ body {
    width: 150px;
 }
 
-#foot-logo {
+.foot-logo {
    background-image: url('assets/logo-white.svg');
    background-repeat: no-repeat;
    background-size: contain;
@@ -248,7 +255,7 @@ body {
    height: 100px;
 }
 
-#logo-des {
+.logo-des {
    text-align: center;
    font-family: Arial, Helvetica, sans-serif;
    font-weight: 600;
@@ -258,28 +265,26 @@ body {
    margin: 15px 0px;
 }
 
-#foot-text {
+.foot-text {
    display: flex;
    justify-content: center;
    color: #ffffff;
 }
 
-#foot-text>div {
+.foot-text>div {
    margin: 0px 20px;
-}
-
-#foot-text>div {
    text-align: center;
 }
 
-#foot-text>div>h4 {
+
+.foot-text>div>h4 {
    font-family: Arial, Helvetica, sans-serif;
    font-weight: 600;
    font-size: 2rem;
    margin: 10px 20px 50px;
 }
 
-#foot-text>div>p {
+.foot-text>div>p {
    font-family: Arial, Helvetica, sans-serif;
    font-weight: 400;
    letter-spacing: 1px;
@@ -287,7 +292,7 @@ body {
    margin: 15px 0px;
 }
 
-#icons {
+.icons {
    display: flex;
    justify-content: center;
    align-items: center;
@@ -304,9 +309,9 @@ body {
 .copyright {
    color: #ffffff;
    text-align: center;
-   font-family: Arial, Helvetica, sans-serif;
+   font-family: RobotoThin, sans-serif;
    font-weight: 100 !important;
    letter-spacing: 1px;
-   font-size: 1.4em;
+   font-size: 1.45em;
    margin: 20px 0px;
 }
