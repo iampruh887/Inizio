@@ -207,7 +207,7 @@ body {
 #footer {
    bottom: 50px;
    background-color: #131313;
-   padding-top: 5rem;
+   padding-top: 80px;
 }
 
 #foot-container {
@@ -287,4 +287,27 @@ body {
    letter-spacing: 1px;
    font-size: 1.4rem;
    margin: 15px 0px;
+}
+
+#icons {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 20px 0px;
+}
+
+.icon {
+   margin: 0px 20px;
+   cursor: pointer;
+   font-size: 50px;
+   color: #ffffff;
+}
+
+.copyright {
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 100 !important;
+   letter-spacing: 1px;
+   font-size: 1.5em;
+   margin: 20px 0px;
 }
