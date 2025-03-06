@@ -3,25 +3,30 @@ document.addEventListener("DOMContentLoaded", function () {
    let dimmer = document.querySelector(".black-overlay");
    let navPanel = document.querySelector(".nav-hid");
    let cross = document.querySelector(".cross");
+   let rot = document.querySelector(".rot");
 
    gear.addEventListener("click", function () {
       dimmer.classList.toggle("dim-show");
-      navPanel.classList.toggle("nav-show");
+      rot.classList.add("gear-rot");
+      rot.classList.remove("anti-rot");
+      navPanel.classList.add("nav-show");
+      navPanel.classList.remove("nav-hide");
    });
    
    dimmer.addEventListener("click", function () {
       dimmer.classList.toggle("dim-show");
-      navPanel.classList.toggle("nav-show");
+      rot.classList.add("anti-rot");
+      rot.classList.remove("gear-rot");
+      navPanel.classList.add("nav-hide");
+      navPanel.classList.remove("nav-show");
    });
-
-   navPanel.addEventListener("click", function () {
+   
+   cross.addEventListener("click", function () {
       dimmer.classList.toggle("dim-show");
-      navPanel.classList.toggle("nav-show");
+      rot.classList.add("anti-rot");
+      rot.classList.remove("gear-rot");
+      navPanel.classList.add("nav-hide");
+      navPanel.classList.remove("nav-show");
    });
-
-   // cross.addEventListener("click", function () {
-   //    dimmer.classList.toggle("dim-show");
-   //    navPanel.classList.toggle("nav-show");
-   // });
 });
 
