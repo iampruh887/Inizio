@@ -311,6 +311,7 @@ body {
    font-size: 9rem;
    font-family: LexendExtraBold, sans-serif;
    color: #fff5cf;
+   transition: all 0.1s ease-in-out;
 }
 
 .title-text+div>p {
@@ -339,7 +340,8 @@ body {
 .body-content {
    width: 100%;
    position: relative;
-   padding-bottom: 6rem;
+   padding-bottom: 100px;
+   transition: all 0.1s ease-in-out;
 }
 
 .sponsor-type {
@@ -348,6 +350,7 @@ body {
    justify-content: center;
    align-items: center;
    padding: 100px 10px 0px;
+   transition: all 0.1s ease-in-out;
 }
 
 .spon-title {
@@ -382,12 +385,14 @@ body {
 }
 
 .spon {
-   margin: 1.3rem;
+   margin: 20px;
 }
 
 .spon-img {
    height: 22vw;
    width: 26vw;
+   min-height: 220px;
+   min-width: 250px;
    margin-top: 2rem;
    cursor: pointer;
    border-radius: 12px;
@@ -399,8 +404,8 @@ body {
    width: 100%;
    color: #ff6b00;
    font-weight: 200;
-   font-size: 1.2rem;
-   margin: 0.5rem;
+   font-size: 1.3rem;
+   margin: 5px;
 }
 
 /* sponsors list Ends */
@@ -540,8 +545,10 @@ body {
 }
 
 /* Medium Devices (Laptops, Small Desktops) */
-@media (min-width: 769px) and (max-width: 992px) {
-   /* Styles for laptops */
+@media (max-width: 779px) {
+   .body-content {
+      padding-bottom: 60px;
+   }
 }
 
 /* Large Devices (Desktops) till 992px*/
@@ -565,7 +572,11 @@ body {
    .title-text {
       font-size: clamp(3rem, 10vw, 7rem);
    }
+
+   .sponsor-type {
+      padding-top: 60px;
    }
+
 }
 
 /* Extra Large Devices (Large Screens, TVs) */
