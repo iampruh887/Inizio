@@ -89,10 +89,19 @@ body {
    z-index: 15;
    width: 100vw;
    height: 100vh;
+   right: 0px;
    background-color: rgba(0, 0, 0, 0.75);
-   /* display: none; */
-
+   right: -100vw;
 }
+
+.black-overlay.dim-hide {
+   right: -100vw;
+}
+
+.black-overlay.dim-show {
+   right: 0px;
+}
+
 
 .nav-hid {
    position: fixed;
@@ -106,7 +115,16 @@ body {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   /* display: none; */
+   right: -60vw;
+}
+
+.nav-show {
+   right: 0px;
+   transition: all 0.2s ease;
+}
+
+.nav-hide {
+   right: -60vw;
 }
 
 .side-nav {
@@ -167,7 +185,9 @@ body {
    color: #ffffff;
    position: relative;
    bottom: -100px;
+   cursor: pointer;
 }
+
 
 .logo {
    height: 90px;
