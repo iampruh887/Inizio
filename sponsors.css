@@ -8,6 +8,8 @@
 /* #ff9f5a */
 /* #ff6b00 */
 
+
+/* fonts used in the project */
 @font-face {
    font-family: 'LexendExtraBold';
    src: url('assets/fonts/Lexend-ExtraBold.ttf') format('truetype');
@@ -43,12 +45,16 @@
    font-style: normal;
 }
 
+
+/* Universal styles */
 body {
    font-family: RobotoRegular, Arial, Helvetica;
    position: relative;
    background-color: #131313;
 }
 
+
+/* Desktop Navbar Begins Here */
 .navbar {
    padding-top: 20px;
    position: fixed;
@@ -62,6 +68,29 @@ body {
    align-items: center;
 }
 
+.logo {
+   height: 90px;
+   width: 100px;
+   margin: 0px 15px;
+}
+
+.logo>img {
+   background-size: contain;
+   height: 90px;
+   width: 100px;
+}
+
+.gear {
+   position: relative;
+   top: -10px;
+   left: 5px;
+}
+
+.gear>img {
+   height: 4vw;
+   width: 4vw;
+}
+
 .nav-tab {
    display: flex;
    justify-content: right;
@@ -71,6 +100,36 @@ body {
    width: 100%;
 }
 
+
+.gear>img {
+   height: 4vw;
+   width: 4vw;
+}
+
+.nav-btn>a {
+   font-family: sans-serif;
+   font-size: 1.2rem;
+   color: #fff;
+   text-decoration: none;
+   letter-spacing: 2px;
+}
+
+.nav-btn>a>h3 {
+   padding: 0px 10px;
+   width: 16vw;
+   text-align: center;
+}
+
+.nav-btn>a>h3:hover {
+   font-size: 1.3rem;
+   transition: all 0.2s ease-in-out;
+}
+
+/* Desktop Navbar Ends Here */
+
+
+
+/* Phone Navbar Begins Here */
 .phone-nav {
    display: flex;
    justify-content: space-between;
@@ -103,7 +162,6 @@ body {
 .dim-show {
    right: 0px;
 }
-
 
 .nav-hid {
    position: fixed;
@@ -193,28 +251,6 @@ body {
 }
 
 
-.logo {
-   height: 90px;
-   width: 100px;
-   margin: 0px 15px;
-}
-
-.logo>img {
-   background-size: contain;
-   height: 90px;
-   width: 100px;
-}
-
-.gear {
-   position: relative;
-   top: -10px;
-   left: 5px;
-}
-
-.gear>img {
-   height: 4vw;
-   width: 4vw;
-}
 
 .mob-gear>img {
    height: 40px;
@@ -226,11 +262,6 @@ body {
    display: none;
 }
 
-/* .mob-gear>img:hover {
-   transform: rotate(180deg);
-   transition: all 1s ease-in-out;
-} */
-
 .gear-rot {
    transform: rotate(270deg);
    transition: all 1.5s ease-out;
@@ -241,30 +272,11 @@ body {
    transition: all 1.5s ease-out;
 }
 
-.gear>img {
-   height: 4vw;
-   width: 4vw;
-}
+/* Phone Navbar Ends Here  */
 
-.nav-btn>a {
-   font-family: sans-serif;
-   font-size: 1.2rem;
-   color: #fff;
-   text-decoration: none;
-   letter-spacing: 2px;
-}
 
-.nav-btn>a>h3 {
-   padding: 0px 10px;
-   width: 16vw;
-   text-align: center;
-}
-
-.nav-btn>a>h3:hover {
-   font-size: 1.3rem;
-   transition: all 0.2s ease-in-out;
-}
-
+/* Body of page begins here */
+/* Orange Banner Starts */
 .banner {
    background-color: #ff6b00;
    background-image: url('assets/bg.svg');
@@ -277,29 +289,37 @@ body {
 }
 
 .banner>div {
-   display: flex;
-   flex-direction: column;
+   display: inline-block;
+   position: relative;
    text-align: center;
-   max-width: 60vw;
+}
 
+.sub-head {
+   position: absolute;
 }
 
 .title-text {
-   font-size: 10vw;
+   font-size: 10.5vw;
    font-family: LexendExtraBold, sans-serif;
    color: #fff5cf;
+   display: inline-block;
+   margin: 10px
 }
 
-.title-text+div>p {
+.sub-text {
    font-family: sans-serif;
    font-size: 1rem;
    color: #fff5cf;
    line-height: 2rem;
    letter-spacing: 1px;
    font-weight: thin;
-   margin: 20px 20px 0px;
+   margin: 20px 0px;
 }
 
+/* Orange Banner Ends */
+
+
+/* sponsors list Starts */
 .overlay-box {
    background-color: #fff5cf;
    width: 100%;
@@ -309,7 +329,6 @@ body {
 }
 
 .body-content {
-   /* background-color: #ff6b00; */
    width: 100%;
    position: relative;
    padding-bottom: 6rem;
@@ -328,7 +347,6 @@ body {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   /* background-color: red; */
 }
 
 .spon-title>h4 {
@@ -377,7 +395,11 @@ body {
    margin: 0.5rem;
 }
 
+/* sponsors list Ends */
 
+
+
+/* Footer Starts */
 .footer {
    bottom: 50px;
    background-color: #131313;
@@ -489,6 +511,11 @@ body {
    margin: 20px 0px;
 }
 
+/* Footer Ends */
+
+
+
+/* MEDIA QUERIES */
 
 /* Extra Small Devices (Phones) */
 @media (max-width: 576px) {
@@ -499,7 +526,9 @@ body {
 
 /* Small Devices (Tablets, Large Phones) */
 @media (min-width: 577px) and (max-width: 768px) {
-   /* Styles for tablets and large phones */
+   .banner>div {
+      max-width: 80vw;
+   }
 }
 
 /* Medium Devices (Laptops, Small Desktops) */
@@ -507,7 +536,7 @@ body {
    /* Styles for laptops */
 }
 
-/* Large Devices (Desktops) */
+/* Large Devices (Desktops) till 992px*/
 @media (max-width: 993px) {
    .nav-tab {
       display: none;
