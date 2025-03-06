@@ -142,24 +142,6 @@ body {
 
 
 /* Phone Navbar Begins Here */
-.phone-nav {
-   display: flex;
-   justify-content: space-between;
-   flex-wrap: wrap;
-   align-items: center;
-   height: 100%;
-}
-
-.phone-nav>.logo {
-   height: 50px;
-   width: 60px;
-   margin-left: 10px;
-}
-
-.phone-nav>.gear {
-   top: 0px;
-   margin-right: 10px;
-}
 
 .black-overlay {
    position: fixed;
@@ -365,7 +347,7 @@ body {
    font-family: LexendBold, sans-serif;
    font-weight: 400;
    margin: 12px;
-
+   text-align: center;
 }
 
 .spon-title>hr {
@@ -393,7 +375,7 @@ body {
    width: 26vw;
    min-height: 220px;
    min-width: 250px;
-   margin-top: 2rem;
+   margin-top: 30px;
    cursor: pointer;
    border-radius: 12px;
    background: url('assets/Sponsor.png') no-repeat center;
@@ -530,29 +512,17 @@ body {
 
 /* MEDIA QUERIES */
 
-/* Extra Small Devices (Phones) */
-@media (max-width: 576px) {
-   .nav-tab {
-      display: none;
-   }
+
+/* Extra Large Devices (Large Screens, TVs) */
+@media (min-width: 1201px) {
+   /* Styles for very large screens */
 }
 
-/* Small Devices (Tablets, Large Phones) */
-@media (min-width: 577px) and (max-width: 768px) {
-   .banner>div {
-      max-width: 80vw;
-   }
-}
-
-/* Medium Devices (Laptops, Small Desktops) */
-@media (max-width: 779px) {
-   .body-content {
-      padding-bottom: 60px;
-   }
-}
 
 /* Large Devices (Desktops) till 992px*/
 @media (max-width: 993px) {
+
+
    .nav-tab {
       display: none;
    }
@@ -577,9 +547,40 @@ body {
       padding-top: 60px;
    }
 
+   .spon-title>h4 {
+      font-size: 2rem;
+   }
+
 }
 
-/* Extra Large Devices (Large Screens, TVs) */
-@media (min-width: 1201px) {
-   /* Styles for very large screens */
+/* Medium Devices (Laptops, Small Desktops) */
+@media (max-width: 779px) {
+   .body-content {
+      padding-bottom: 60px;
+   }
+
+   .spon-title>h4 {
+      font-size: 1.8rem;
+   }
+
+   .sponsor-type {
+      padding-top: 30px;
+   }
+
+   .spon {
+      margin: 20px 20px 5px;
+   }
+
+   .spon-img {
+      margin-top: 5px;
+   }
+
+}
+
+
+/* Small Devices (Tablets, Large Phones) */
+@media (max-width: 577px) {
+   .spon-title>h4 {
+      font-size: 1.6rem;
+   }
 }
