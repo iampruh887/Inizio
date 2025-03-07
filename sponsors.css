@@ -68,16 +68,12 @@ body {
    align-items: center;
 }
 
-.logo {
-   height: 90px;
-   width: 100px;
-   margin: 0px 15px;
-}
-
 .logo>img {
    background-size: contain;
    height: 90px;
    width: 100px;
+   margin: 0px 25px;
+   transition: all 0.2s ease-in-out;
 }
 
 .gear {
@@ -94,7 +90,6 @@ body {
 .nav-tab {
    display: flex;
    justify-content: right;
-   flex-wrap: wrap;
    align-items: center;
    height: 100%;
    width: 100%;
@@ -522,7 +517,6 @@ body {
 /* Large Devices (Desktops) till 992px*/
 @media (max-width: 993px) {
 
-
    .nav-tab {
       display: none;
    }
@@ -549,6 +543,10 @@ body {
 
    .spon-title>h4 {
       font-size: 2rem;
+   }
+
+   .logo>img {
+      height: 70px;
    }
 
 }
@@ -582,5 +580,10 @@ body {
 @media (max-width: 577px) {
    .spon-title>h4 {
       font-size: 1.6rem;
+   }
+
+   .logo>img {
+      height: 55px;
+      margin: 15px 15px;
    }
 }
