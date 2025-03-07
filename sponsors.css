@@ -180,9 +180,10 @@ body {
 
 
 .side-nav {
-   margin: 50px 10px 10px;
+   margin: 10px 10px;
    padding-top: 20px;
    width: 100%;
+   position: relative;
 }
 
 .tri {
@@ -190,6 +191,29 @@ body {
    height: 50vh;
    display: flex;
    align-items: end;
+   position: absolute;
+   z-index: -1;
+   bottom: 0px;
+}
+
+.top {
+   top: 0px;
+   align-items: start;
+}
+
+.top-left-tri {
+   width: 60%;
+   background-color: rgba(255, 165, 101, 0.7);
+   height: 100%;
+   clip-path: polygon(0 0, 0 100%, 100% 0);
+   background: linear-gradient(90deg, rgba(255, 143, 63, 0.2), rgba(255, 107, 0, 0.3));
+}
+
+.top-right-tri {
+   width: 40%;
+   height: 60%;
+   clip-path: polygon(0 0, 100% 0, 100% 100%);
+   background: linear-gradient(90deg, rgba(255, 121, 25, 0.1), rgba(255, 150, 3, 0.2));
 }
 
 .left-tri {
@@ -207,16 +231,10 @@ body {
    background: linear-gradient(90deg, rgba(255, 121, 25, 0.1), rgba(255, 150, 3, 0.2));
 }
 
-.triangle {
-   width: 200px;
-   aspect-ratio: 1;
-   clip-path: polygon(0 0, 100% 100%, 0 100%);
-   background: linear-gradient(90deg, red, lightblue);
-}
-
 .mob-tab {
    position: relative;
-   top: 20px;
+   margin: 20px 20px 100px;
+   /* top: 20px; */
 }
 
 .side-nav>div>a>h3 {
@@ -236,7 +254,7 @@ body {
    font-size: 40px;
    color: #ffffff;
    position: relative;
-   bottom: -100px;
+   /* bottom: -100px; */
    cursor: pointer;
 }
 
@@ -539,11 +557,11 @@ body {
       display: block;
    }
 
-   .left-tri {
+   .left-tri, .top-right-tri {
       display: none;
    }
 
-   .right-tri {
+   .right-tri, .top-left-tri {
       width: 100%;
    }
 
