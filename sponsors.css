@@ -203,8 +203,8 @@ body {
 
 .top-left-tri {
    width: 60%;
-   background-color: rgba(255, 165, 101, 0.7);
    height: 100%;
+   display: flex;
    clip-path: polygon(0 0, 0 100%, 100% 0);
    background: linear-gradient(90deg, rgba(255, 143, 63, 0.2), rgba(255, 107, 0, 0.3));
 }
@@ -218,7 +218,6 @@ body {
 
 .left-tri {
    width: 40%;
-   background-color: rgba(255, 165, 101, 0.7);
    height: 60%;
    clip-path: polygon(0 0, 100% 100%, 0 100%);
    background: linear-gradient(90deg, rgba(255, 143, 63, 0.2), rgba(255, 107, 0, 0.3));
@@ -227,14 +226,32 @@ body {
 .right-tri {
    width: 60%;
    height: 100%;
+   display: flex;
    clip-path: polygon(100% 0, 100% 100%, 0 100%);
    background: linear-gradient(90deg, rgba(255, 121, 25, 0.1), rgba(255, 150, 3, 0.2));
+}
+
+.in-tri {
+   width: 60%;
+   height: 40%;
+   bottom: 0px;
+   right: 0px;
+   position: absolute;
+   clip-path: polygon(100% 0, 100% 100%, 0 100%);
+   background: linear-gradient(45deg, rgba(96, 40, 0, 0.1), rgba(244, 152, 23, 0.856));
+}
+
+.top-in-tri {
+   top: 0px;
+   left: 0px;
+   clip-path: polygon(0 0, 0 100%, 100% 0);
+   background: linear-gradient(135deg, rgba(96, 40, 0, 0.1), rgba(244, 152, 23, 0.856));
+
 }
 
 .mob-tab {
    position: relative;
    margin: 20px 20px 100px;
-   /* top: 20px; */
 }
 
 .side-nav>div>a>h3 {
@@ -585,6 +602,10 @@ body {
 
 /* Medium Devices (Laptops, Small Desktops) */
 @media (max-width: 779px) {
+   .tri {
+      height: 35vh;
+   }
+
    .body-content {
       padding-bottom: 60px;
    }
