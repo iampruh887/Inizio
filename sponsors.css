@@ -60,6 +60,9 @@ body {
    position: fixed;
    width: 100vw;
    z-index: 10;
+   background-color: rgba(255, 107, 0, 0.5);
+   -webkit-backdrop-filter: blur(4px);
+   backdrop-filter: blur(4px);
 }
 
 .navigation {
@@ -73,7 +76,7 @@ body {
    background-size: contain;
    height: 90px;
    width: 100px;
-   margin: 0px 25px;
+   margin: 0px 25px 10px;
    transition: all 0.2s ease-in-out;
 }
 
@@ -128,8 +131,23 @@ body {
    text-align: center;
 }
 
-.nav-btn>a>h3:hover {
-   font-size: 1.3rem;
+.nav-btn>a>h3:hover, .mob-tab>a>h3:hover {
+   font-size: 1.2rem;
+   color: #fff0b4;
+   transition: all 0.2s ease-in-out;
+}
+
+.mob-tab>a>h3:hover {
+   font-size: 1.6rem;
+}
+
+.nav-btn>a>h3:active, .mob-tab>a>h3:active {
+   color: #f5c509;
+}
+
+.cross:hover {
+   font-size: 50px;
+   transform: rotate(90deg);
    transition: all 0.2s ease-in-out;
 }
 
@@ -157,7 +175,9 @@ body {
    position: fixed;
    z-index: 25;
    right: 0px;
-   background-color: rgba(255, 107, 0, 0.7);
+   background-color: rgba(255, 107, 0, 0.5);
+   -webkit-backdrop-filter: blur(10px);
+   backdrop-filter: blur(10px);
    width: 60vw;
    height: 100vh;
    text-align: center;
@@ -166,6 +186,11 @@ body {
    justify-content: center;
    align-items: center;
    right: -60vw;
+}
+
+.blur {
+   -webkit-backdrop-filter: blur(5px);
+   backdrop-filter: blur(5px);
 }
 
 .nav-show {
@@ -535,8 +560,12 @@ body {
    margin: 0px 20px;
    cursor: pointer;
    font-size: 50px;
-   color: #ffffff;
    transition: all 0.1s ease-in-out;
+}
+
+.icon>a {
+   color: #ffffff;
+   text-decoration: none;
 }
 
 .copyright {
@@ -581,6 +610,12 @@ body {
 
 /* Large Devices (Desktops) till 992px*/
 @media (max-width: 993px) {
+
+   .navbar {
+      background-color: transparent;
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: none;
+   }
 
    .nav-tab {
       display: none;
