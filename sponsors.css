@@ -409,6 +409,7 @@ body {
 .f-logo-box {
    width: auto;
    margin: 90px 0px;
+   transition: all 0.1s ease-in-out;
 }
 
 .f-logo-box>div {
@@ -417,12 +418,14 @@ body {
    flex-wrap: wrap;
    align-items: center;
    padding: 10px 0px;
+   transition: all 0.1s ease-in-out;
 }
 
 .foot-gear {
    background-image: url('assets/gear.png');
    background-size: contain;
    background-repeat: no-repeat;
+   background-position: center;
    height: 160px;
    width: 160px;
    margin: 30px 0px;
@@ -433,6 +436,7 @@ body {
    background-image: url('assets/logo-white.svg');
    background-repeat: no-repeat;
    background-size: contain;
+   background-position: center;
    width: 150px;
    height: 100px;
    margin: 30px 0px;
@@ -454,11 +458,13 @@ body {
    flex-wrap: wrap;
    color: #ffffff;
    margin: 90px 0px;
+   transition: all 0.1s ease-in-out;
 }
 
 .foot-text>div {
    margin: 30px 20px;
    text-align: center;
+   transition: all 0.1s ease-in-out;
 }
 
 
@@ -467,6 +473,7 @@ body {
    font-weight: 600;
    font-size: 2rem;
    margin: 10px 20px 50px;
+   transition: all 0.1s ease-in-out;
 }
 
 .foot-text>div>p {
@@ -482,7 +489,7 @@ body {
    justify-content: center;
    flex-wrap: wrap;
    align-items: center;
-   margin: 20px 0px;
+   margin: 20px 5px;
 }
 
 .icon {
@@ -490,6 +497,7 @@ body {
    cursor: pointer;
    font-size: 50px;
    color: #ffffff;
+   transition: all 0.1s ease-in-out;
 }
 
 .copyright {
@@ -499,6 +507,7 @@ body {
    letter-spacing: 1px;
    font-size: 1.45em;
    margin: 20px 0px;
+   transition: all 0.1s ease-in-out;
 }
 
 /* Footer Ends */
@@ -584,6 +593,43 @@ body {
 
    .logo>img {
       height: 55px;
-      margin: 15px 15px;
+      margin: 15px 10px;
+   }
+
+   .f-logo-box, .foot-text {
+      margin: 30px 0px 10px;
+   }
+
+   .foot-gear {
+      width: 100%;
+      margin: 20px 0px;
+      height: 130px;
+   }
+
+   .foot-logo {
+      width: 100%;
+      margin: 20px 0px;
+      height: 130px;
+   }
+
+   .logo-des{
+      font-size: 1rem;
+   }
+
+   .foot-text>div {
+      margin: 20px;
+   }
+
+   .foot-text>div>h4 {
+      font-size: 1.8rem;
+      margin: 10px 20px 30px;
+   }
+
+   .icon {
+      font-size: 40px
+   }
+
+   .copyright {
+      font-size: 1.2rem;
    }
 }
