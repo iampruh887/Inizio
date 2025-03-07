@@ -572,6 +572,23 @@ body {
    text-decoration: none;
 }
 
+#insta:hover, #insta:active {
+   background: linear-gradient(45deg, #feda77,
+         #f58529, #dd2a7b, #bc2a8d 100%);
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+   background-clip: text;
+}
+
+#linkedin:hover, #linkedin:active {
+   background: linear-gradient(45deg, #004a99,
+         #1cb3ff 100%);
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+   background-clip: text;
+}
+
+
 .copyright {
    color: #ffffff;
    text-align: center;
