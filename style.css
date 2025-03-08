@@ -4,6 +4,7 @@
    box-sizing: border-box;
    -webkit-tap-highlight-color: transparent;
    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   transition: all 0.15s ease-in-out;
    /* box-sizing: border-box; */
 }
 
@@ -44,6 +45,27 @@
    font-family: 'RobotoRegular';
    src: url('assets/fonts/Roboto-Regular.ttf') format('truetype');
    font-weight: 400;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'PoppinsMedium';
+   src: url('assets/fonts/Poppins-Medium.ttf') format('truetype');
+   font-weight: 400;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'PoppinsBold';
+   src: url('assets/fonts/Poppins-Bold.ttf') format('truetype');
+   font-weight: 400;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'PoppinsExtraBold';
+   src: url('assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+   font-weight: 800;
    font-style: normal;
 }
 
@@ -304,8 +326,6 @@ body {
    cursor: pointer;
 }
 
-
-
 .mob-gear>img {
    height: 40px;
    width: 40px;
@@ -329,7 +349,12 @@ body {
 /* Phone Navbar Ends Here  */
 
 
-/* Body of page begins here */
+
+
+/* BODY OF PAGE BEGINS HERE */
+
+/*SPONSOR PAGE CLASSES*/
+
 /* Orange Banner Starts */
 .banner {
    background-color: #ff6b00;
@@ -382,7 +407,7 @@ body {
 .body-content {
    width: 100%;
    position: relative;
-   padding-bottom: 100px;
+   padding: 40px 0px 100px;
    transition: all 0.1s ease-in-out;
 }
 
@@ -452,6 +477,333 @@ body {
 
 /* sponsors list Ends */
 
+/* SPONSORS PAGE CLASSES ENDS */
+/* LANDING PAGE CLASSES STARTS */
+
+/* Banner Starts */
+/* Banner Ends */
+
+/* Body Starts */
+
+.bg-gear {
+   background-image: url('assets/transp-gear.svg');
+   background-repeat: no-repeat;
+   background-size: contain;
+   transition: all 0.2s ease-in-out !important;
+}
+
+.article-l {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 30px 0px;
+}
+
+.padd {
+   padding: 150px 0px;
+   margin: -30px 0px;
+}
+
+.wide {
+   width: 70vw;
+}
+
+.head-title-l {
+   display: flex;
+   justify-content: left;
+   align-items: center;
+   text-align: left;
+}
+
+.big-title {
+   display: inline-block;
+   font-family: PoppinsExtraBold, sans-serif;
+   font-size: 6rem;
+   line-height: 1;
+   transition: all 0.1s ease-in-out;
+   white-space: nowrap;
+}
+
+.head-des {
+   margin: 15px 30px 10px;
+   font-size: 1.6rem;
+   font-family: RobotoRegular, sans-serif;
+   font-weight: 800;
+   color: #ff6b00;
+   transition: all 0.1s ease-in-out;
+   letter-spacing: 1px;
+}
+
+.hid-des {
+   margin: 10px 0px;
+   display: none;
+}
+
+.down-title {
+   position: relative;
+   top: -10px;
+   display: flex;
+   justify-content: left;
+}
+
+.big-title>span {
+   position: relative;
+}
+
+.title-gear {
+   height: 120px;
+   position: absolute;
+   top: -20px;
+   margin: 0px 15px;
+
+}
+
+.headline-l {
+   font-family: PoppinsExtraBold, sans-serif;
+   font-weight: 800;
+   font-size: 1.4rem;
+   letter-spacing: 1px;
+   margin-top: 20px;
+}
+
+.para {
+   font-family: RobotoRegular, sans-serif;
+   font-weight: 600;
+   font-size: 1.3rem;
+   margin: 5px 0px 0px;
+   line-height: 1.5;
+   letter-spacing: 1px;
+}
+
+
+.article-r {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 30px 0px;
+}
+
+.head-title-r {
+   display: flex;
+   justify-content: right;
+   align-items: center;
+   text-align: right;
+}
+
+.right {
+   text-align: right;
+}
+
+.headline-r {
+   color: #ff6b00;
+   font-size: 1.5rem;
+   letter-spacing: 1px;
+   font-family: RobotoRegular, sans-serif;
+   font-weight: 800;
+   margin: 10px 0px 15px;
+}
+
+.event-list {
+   margin: 100px 0px 150px;
+}
+
+.events {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.event {
+   background-color: #ff6b00;
+   border-radius: 15px;
+   display: flex;
+   margin: 15px 0px;
+}
+
+.event-l {
+   flex-direction: row;
+}
+
+.event-r {
+   flex-direction: row-reverse;
+}
+
+.event-text {
+   width: 55%;
+   padding: 25px;
+}
+
+.event-title {
+   font-size: 6rem;
+   line-height: 1;
+   margin: 20px 0px 10px;
+   font-family: PoppinsBold, sans-serif;
+   font-weight: 600;
+}
+
+.event-des {
+   font-family: RobotoRegular, sans-serif;
+   font-size: 1.3rem;
+   line-height: 1.3;
+   margin-bottom: 120px;
+}
+
+.event-outline {
+   background-color: #fff5cf;
+   border-radius: 15px;
+   width: 45%;
+}
+
+.event-img-l {
+   background-color: #131313;
+   height: 100%;
+   margin-left: 25px;
+   border-radius: 15px;
+   position: relative;
+}
+
+.event-img-r {
+   background-color: #131313;
+   height: 100%;
+   margin-right: 25px;
+   border-radius: 15px;
+   position: relative;
+}
+
+.event-tag {
+   position: absolute;
+   bottom: 25px;
+   right: 10px;
+   letter-spacing: 8px;
+   font-family: PoppinsExtraBold, sans-serif;
+   color: #ff6b00;
+   font-size: 1.6rem;
+   font-weight: 600;
+}
+
+.tag-r {
+   left: 25px;
+}
+
+
+.merch-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+
+.merches {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   width: 100%;
+}
+
+.merch {
+   background-color: #ff6b00;
+   border-radius: 15px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   height: 700px;
+   width: 40%;
+   margin: 60px 0px 120px;
+}
+
+.merch-outline {
+   background-color: #fff5cf;
+   border-radius: 15px;
+   width: 100%;
+   height: 100%;
+   padding-bottom: 25px;
+}
+
+.merch-img {
+   background-color: #131313;
+   height: 100%;
+   margin-bottom: 25px;
+   border-radius: 15px;
+}
+
+.merch-data {
+   padding: 20px;
+}
+
+.merch-name {
+   font-family: PoppinsBold, sans-serif;
+   font-weight: 800;
+   font-size: 3.5rem;
+   line-height: 1;
+}
+
+.merch-avail {
+   font-family: RobotoRegular, sans-serif;
+   font-size: 1.6rem;
+   font-weight: 400;
+   color: #ffffff;
+   letter-spacing: 1px;
+   margin: 5px 0px;
+}
+
+.merch-size {
+   font-family: RobotoRegular, sans-serif;
+   font-size: 1.3rem;
+   font-weight: 600;
+   color: #131313;
+   letter-spacing: 1px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   width: 60%;
+   margin: 10px 0px;
+
+}
+
+.avail, .sold {
+   background-color: #ffeee5;
+   width: 26%;
+   border-radius: 5px;
+   margin: 5px 0px;
+   text-align: center;
+   padding: 5px;
+   height: 100%;
+}
+
+.sold {
+   color: rgba(0, 0, 0, 0.5);
+}
+
+.merch-buy {
+   display: flex;
+   flex-direction: row;
+   justify-content: end;
+}
+
+.merch-buy>button {
+   background-color: #fff5cf;
+   font-family: RobotoRegular, sans-serif;
+   font-weight: 600;
+   font-size: 1.3rem;
+   border: none;
+   padding: 10px 20px;
+   margin-top: 20px;
+   border-radius: 10px;
+   cursor: pointer;
+   bottom: 0px;
+   right: 0px;
+   border-bottom: 5px solid #a94600cf;
+}
+
+
+/* Body Ends */
 
 
 /* Footer Starts */
@@ -486,7 +838,7 @@ body {
 }
 
 .foot-gear {
-   background-image: url('assets/gear.png');
+   background-image: url('assets/gear.svg');
    background-size: contain;
    background-repeat: no-repeat;
    background-position: center;
@@ -626,11 +978,42 @@ body {
       margin: 30px 0px 10px;
    }
 
+   .wide {
+      width: 75vw;
+   }
+
+   .big-title {
+      font-size: 4.8rem;
+   }
+
+   .head-des, .headline-r {
+      font-size: 1.4rem;
+   }
+
+   .headline-l {
+      font-size: 1.3rem;
+   }
+
+   .para {
+      line-height: 1.35;
+   }
+
+   .event-title {
+      font-size: 4.2rem;
+   }
+
+   .event-des {
+      font-size: 1.25rem;
+      margin-bottom: 80px;
+   }
+
+
+
 }
 
 
 /* Large Devices (Desktops) till 992px*/
-@media (max-width: 993px) {
+@media (max-width: 992px) {
 
    .navbar {
       background-color: transparent;
@@ -666,8 +1049,9 @@ body {
       font-size: 2rem;
    }
 
-   .logo>img {
-      height: 70px;
+   .logo>a>img {
+      height: 55px;
+      margin: 10px 0px;
    }
 
    .foot-gear {
@@ -699,16 +1083,61 @@ body {
       font-size: 1.1rem;
    }
 
+   .wide {
+      width: 80vw;
+   }
+
+   .padd {
+      margin: -50px 0px;
+      padding: 90px 0px;
+   }
+
+   .bg-gear {
+      background-position: top left;
+      background-size: 50%;
+      background-clip: border-box;
+   }
+
+   .big-title {
+      font-size: 4rem;
+   }
+
+   .head-des, .headline-r {
+      font-size: 1.3rem;
+   }
+
+   .headline-l {
+      font-size: 1.15rem;
+   }
+
+   .para {
+      font-size: 1rem;
+   }
+
+
+   .event-title {
+      font-size: 3.5rem;
+   }
+
+   .event-des {
+      font-size: 1.15rem;
+      margin-bottom: 70px;
+   }
+
+   .event-tag {
+      font-size: 1.4rem;
+   }
+
 }
 
 /* Medium Devices (Laptops, Small Desktops) */
-@media (max-width: 779px) {
+@media (max-width: 780px) {
    .tri {
       height: 35vh;
    }
 
    .body-content {
-      padding-bottom: 60px;
+      padding: 20px 0px 60px;
    }
 
    .spon-title>h4 {
@@ -761,6 +1190,54 @@ body {
       font-size: 1.1rem;
    }
 
+
+   .bg-gear {
+      background-size: 70%;
+   }
+
+   .big-title {
+      font-size: 3.5rem;
+   }
+
+   .down-title {
+      top: 0px;
+   }
+
+   .head-des {
+      font-size: 1.2rem;
+      display: none;
+   }
+
+   .hid-des, .headline-r {
+      display: block;
+      font-size: 1.1rem;
+   }
+
+   .title-gear {
+      display: none;
+   }
+
+   .padd {
+      margin: -20px 0px;
+      padding: 80px 0px 30px;
+   }
+
+   .event-title {
+      font-size: 3rem;
+   }
+
+   .event-des {
+      font-size: 1.1rem;
+      margin-bottom: 50px;
+   }
+
+   .event-text {
+      padding: 10px 25px;
+   }
+
+   .event-tag {
+      font-size: 1.3rem;
+   }
 }
 
 
@@ -768,11 +1245,6 @@ body {
 @media (max-width: 577px) {
    .spon-title>h4 {
       font-size: 1.6rem;
-   }
-
-   .logo>a>img {
-      height: 55px;
-      margin: 10px 0px;
    }
 
    .f-logo-box, .foot-text {
@@ -815,4 +1287,55 @@ body {
    .copyright {
       font-size: 0.9rem;
    }
+
+
+
+   .wide {
+      width: 90vw;
+   }
+
+   .big-title {
+      font-size: 2.2rem;
+   }
+
+
+   .event {
+      height: 600px;
+      margin: 15px 50px;
+   }
+
+   .event-l {
+      flex-direction: column-reverse;
+   }
+
+   .event-r {
+      flex-direction: column-reverse;
+   }
+
+   .event-text {
+      padding: 10px 25px;
+      width: 100%;
+      height: 40%;
+   }
+
+   .event-title {
+      font-size: 3rem;
+   }
+
+   .event-des {
+      font-size: 1.1rem;
+      margin-bottom: 50px;
+   }
+
+   .event-outline {
+      width: 100%;
+      height: 60%;
+      padding: 0px 0px 25px;
+   }
+
+   .event-img-l, .event-img-r {
+      width: 100%;
+      margin: 0px 0px 20px;
+   }
+
 }

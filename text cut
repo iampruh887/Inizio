@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Falling Sun Text</title>
+   <style>
+      body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         background-color: #c95c15;
+         margin: 0;
+      }
+
+      .text-container {
+         position: relative;
+         font-size: 100px;
+         font-weight: bold;
+         color: #d8c3a5;
+         text-transform: uppercase;
+         overflow: hidden;
+         display: flex;
+         align-items: flex-start;
+         height: 60px;
+         /* Adjust this to control the visible part */
+      }
+   </style>
+</head>
+
+<body>
+   <div class="text-container">2025</div>
+</body>
+
+</html>
