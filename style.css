@@ -541,6 +541,7 @@ body {
    font-family: PoppinsExtraBold, sans-serif;
    font-size: 6rem;
    line-height: 1;
+   white-space: nowrap;
    transition: all 0.1s ease-in-out;
 }
 
@@ -696,7 +697,7 @@ body {
 .event-tag {
    position: absolute;
    bottom: 25px;
-   right: 10px;
+   right: 15px;
    letter-spacing: 8px;
    font-family: PoppinsExtraBold, sans-serif;
    color: #ff6b00;
@@ -988,10 +989,6 @@ body {
    .f-logo-box {
       margin-left: 60px;
    }
-
-   .event-list {
-      margin
-   }
 }
 
 
@@ -1030,7 +1027,9 @@ body {
       margin-bottom: 80px;
    }
 
-
+   .event-list {
+      margin: 60px 0px 100px
+   }
 
 }
 
@@ -1151,6 +1150,10 @@ body {
       font-size: 1.4rem;
    }
 
+   .event-list {
+      margin: 40px 0px 70px;
+   }
+
 }
 
 /* Medium Devices (Laptops, Small Desktops) */
@@ -1220,6 +1223,7 @@ body {
 
    .big-title {
       font-size: 3.5rem;
+      white-space: wrap;
    }
 
    .down-title {
@@ -1266,6 +1270,10 @@ body {
 
    .event-tag {
       font-size: 1.3rem;
+   }
+
+   .event-list {
+      margin: 40px 0px 70px;
    }
 }
 
@@ -1342,18 +1350,16 @@ body {
    }
 
    .event-list {
-      margin: 30px 0px;
+      margin: 30px 30px;
    }
 
    .event {
-      margin: 30px 10px;
+      margin: 10px 0px 50px;
    }
 
    .event-l {
       flex-direction: column-reverse;
    }
-
-
 
    .event-r {
       flex-direction: column-reverse;
@@ -1383,6 +1389,18 @@ body {
       width: 100%;
       height: 90vw;
       margin: 0px 0px 20px;
+      transition: all 0s ease-in-out;
    }
+
+   
+   .merches {
+      padding: 15px 10px;
+   }
+
+   .merch {
+      width: 100%;
+      margin: 20px 0px 40px;
+   }
+
 
 }
