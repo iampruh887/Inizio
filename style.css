@@ -1456,12 +1456,12 @@ body {
    }
 
    .merch-name {
-      font-size: 3.2rem;
+      font-size: 2.8rem;
    }
 
    .merch-size {
       width: 75%;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
    }
 
    .avail, .sold {
