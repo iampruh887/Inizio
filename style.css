@@ -1341,11 +1341,6 @@ body {
       margin-bottom: 8px;
    }
 
-
-   .event {
-      margin: 15px 30px;
-   }
-
    .event-l {
       flex-direction: column-reverse;
    }
