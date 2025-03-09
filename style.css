@@ -1133,6 +1133,10 @@ body {
       font-size: 1.2rem;
    }
 
+   .down-title{
+      top: 5px;
+   }
+
    .para {
       font-size: 1.15rem;
    }
@@ -1457,6 +1461,7 @@ body {
 
    .merch-size {
       width: 75%;
+      margin-bottom: 10px;
    }
 
    .avail, .sold {
