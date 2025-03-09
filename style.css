@@ -1354,7 +1354,7 @@ body {
    }
 
    .event {
-      margin: 10px 0px 50px;
+      margin: 10px 5px 50px;
    }
 
    .event-l {
@@ -1399,6 +1399,7 @@ body {
    .merch {
       width: 100%;
       margin: 15px 0px 30px;
+      height: 600px;
    }
 
    .merch-outline {
