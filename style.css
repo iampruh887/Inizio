@@ -1392,15 +1392,33 @@ body {
       transition: all 0s ease-in-out;
    }
 
-   
    .merches {
-      padding: 15px 10px;
+      padding: 0px 10px 15px;
    }
 
    .merch {
       width: 100%;
-      margin: 20px 0px 40px;
+      margin: 15px 0px 30px;
    }
 
+   .merch-outline {
+      padding-bottom: 20px;
+   }
+
+   .merch-name {
+      font-size: 3.2rem;
+   }
+
+   .merch-size {
+      width: 75%;
+   }
+
+   .avail, .sold {
+      font-size: 1.2rem;
+   }
+
+   .merch-buy>button {
+      font-size: 1.2rem;
+   }
 
 }
