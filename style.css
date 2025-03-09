@@ -211,6 +211,7 @@ body {
    right: 0px;
    background-color: rgba(0, 0, 0, 0.75);
    right: -100vw;
+   transition: all 0s ease;
 }
 
 .dim-show {
@@ -1154,6 +1155,26 @@ body {
       margin: 40px 0px 70px;
    }
 
+
+   .merches {
+      padding: 0px 10px 40px;
+   }
+
+   .merch {
+      width: 45%;
+      margin: 15px 0px 30px;
+      height: 600px;
+   }
+
+   .merch-name {
+      font-size: 2.8rem;
+   }
+
+   .merch-size {
+      width: 70%;
+   }
+
+
 }
 
 /* Medium Devices (Laptops, Small Desktops) */
@@ -1275,6 +1296,30 @@ body {
    .event-list {
       margin: 40px 0px 70px;
    }
+
+   .merches {
+      padding: 0px 10px 15px;
+   }
+
+   .merch {
+      width: 100%;
+      margin: 15px 0px 30px;
+      height: 800px;
+   }
+
+   .merch-img {
+      width: 100%;
+   }
+
+   .merch-name {
+      font-size: 4rem;
+   }
+
+   .merch-size {
+      width: 70%;
+      margin-bottom: 40px;
+   }
+
 }
 
 
@@ -1354,7 +1399,7 @@ body {
    }
 
    .event {
-      margin: 10px 5px 50px;
+      margin: 10px 0px 50px;
    }
 
    .event-l {
@@ -1419,7 +1464,7 @@ body {
    }
 
    .merch-buy>button {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
    }
 
 }
