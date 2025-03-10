@@ -384,7 +384,7 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-   height: calc(100vh + 25px);
+   height: calc(70vh + 25px);
    width: 100%;
 }
 
@@ -563,7 +563,7 @@ body {
 
 .down-title {
    position: relative;
-   top: -10px;
+   top: 0px;
    display: flex;
    justify-content: left;
 }
@@ -829,13 +829,14 @@ body {
 
 
 .alt-slider {
-   height: 100vh;
+   height: 65vw;
    width: 100%;
-   background-color: #131313;
+   background-color: #232323;
+   padding: 50px 0px;
 }
 
 .alt-slider-2 {
-   height: 80vh;
+   height: 40vw;
    width: 100%;
    background-color: #fff5cf;
 }
@@ -844,47 +845,81 @@ body {
    height: 50%;
    width: 100%;
    position: relative;
+   overflow-x: hidden;
 }
 
-.three {
+.slider-2 {
    height: 33.33%;
+}
+
+.slider-2>.slider {
+   padding: 20px 0px;
+}
+
+.slider-2>.slider>.slide {
+   padding: 0px 20px;
+}
+.slider-2>.slider>.slide>.slide-img {
+border-radius: 25px;
 }
 
 .slider {
    position: absolute;
    overflow: hidden;
    white-space: nowrap;
-   animation: scroll-r 45s linear infinite;
+   animation: scroll-r 40s linear infinite;
    font-size: 0;
    height: 100%;
-   padding: 20px;
+   padding: 40px 0px;
    display: flex;
 }
 
 .left {
-   animation: scroll-l 45s linear infinite;
+   animation: scroll-l 40s linear infinite;
 }
 
 .slide {
    width: 25vw;
-   height: auto;
    align-items: baseline;
-   padding: 15px;
-   margin: 0px 20px;
+   padding: 0px 35px;
    font-size: initial;
    height: 100%;
-   border: 2px solid #fff5cf;
-   border-radius: 15px;
 }
 
-.slide-black {
-   background-color: #131313;
+.slide-img {
+   border: 4px solid #fff5cf;
+   background-color: #232323;
+   width: 100%;
+   height: 100%;
+   border-radius: 13px;
+   padding: 15px;
 }
 
 .slide-text {
    width: 100%;
-
+   height: 100%;
+   color: #ffffff;
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
 }
+
+.slide-name {
+   font-size: 1.5rem;
+   font-family: Roboto, sans-serif;
+   font-weight: 600;
+   margin: 5px 10px;
+}
+
+.slide-post {
+   font-size: 1rem;
+   font-family: RobotoRegular, sans-serif;
+   font-weight: 400;
+   margin: 0px 10px 15px;
+   letter-spacing: 1px;
+}
+
+
 
 
 @keyframes scroll-l {
