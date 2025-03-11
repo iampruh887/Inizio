@@ -1151,7 +1151,7 @@ body {
 
 .logo-des {
    text-align: center;
-   font-family: Arial, Helvetica, sans-serif;
+   font-family: Roboto, sans-serif, Helvetica;
    font-weight: 600;
    letter-spacing: 1px;
    font-size: 1.2rem;
@@ -1856,7 +1856,7 @@ body {
    }
 
    .f-logo-box {
-      margin: 0px 0px 10px;
+      margin: 0px;
       width: 100%;
    }
 
@@ -1866,22 +1866,25 @@ body {
    }
 
    .foot-gear {
-      margin: 20px 0px;
-      height: 130px;
-      width: 130px;
+      margin: 15px 0px 0px;
+      height: 100px;
+      width: 100px;
    }
 
    .foot-logo {
-      margin: 20px 0px;
-      height: 120px;
+      margin: 15px 0px 0px;
+      height: 100px;
+      width: 140px;
    }
 
    .logo-des {
+      font-family: Roboto, sans-serif;
       font-size: 0.9rem;
+      line-height: 1.2;
       margin: 0px;
-      padding: 10px 10px !important;
+      padding: 15px 2px !important;
       width: 100%;
-      white-space: nowrap;
+      letter-spacing: 0px;
    }
 
    .foot-text>div {
@@ -1890,7 +1893,7 @@ body {
 
    .foot-text>div>h4 {
       font-size: 1.6rem;
-      margin: 10px 20px 12px;
+      margin: 5px 20px 12px;
    }
 
    .foot-text>div>p {
@@ -1911,8 +1914,6 @@ body {
       font-size: 0.9rem;
       margin: 10px;
    }
-
-
 
    .wide {
       width: 88vw;
