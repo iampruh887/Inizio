@@ -7,7 +7,6 @@
    box-sizing: border-box;
    -webkit-tap-highlight-color: transparent;
    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-   transition: all 0.15s ease-in-out;
    /* box-sizing: border-box; */
 }
 
@@ -45,28 +44,6 @@
    font-style: normal;
 }
 
-/* 
-.roboto-regular {
-   font-family: "Roboto", sans-serif;
-   font-optical-sizing: auto;
-   font-weight: 400;
-   font-style: normal;
-   font-variation-settings: "wdth" 100;
-}
-
-@font-face {
-   font-family: 'RobotoLight';
-   src: url('assets/fonts/Roboto-Light.ttf') format('truetype');
-   font-weight: 100;
-   font-style: normal;
-}
-
-@font-face {
-   font-family: 'RobotoRegular';
-   src: url('assets/fonts/Roboto-Regular.ttf') format('truetype');
-   font-weight: 400;
-   font-style: normal;
-} */
 
 @font-face {
    font-family: 'PoppinsMedium';
@@ -392,7 +369,8 @@ body {
    display: flex;
    flex-direction: column;
    text-align: center;
-   /* max-width: 60vw; */
+   justify-content: center;
+   height: 100%;
 }
 
 .title-text {
@@ -411,6 +389,101 @@ body {
    font-weight: thin;
    margin: 20px 20px 0px;
    width: 60vw;
+}
+
+
+.home-banner {
+   height: calc(90vh + 25px);
+}
+
+.home-banner>div {
+   justify-content: end;
+}
+
+.home-title {
+   font-family: PoppinsExtraBold, sans-serif;
+   font-size: 7rem;
+   font-weight: 900;
+   line-height: 1;
+   color: #fff5cf;
+   transition: all 0.1s ease-in-out;
+}
+
+.home-title-down {
+   font-family: PoppinsExtraBold, sans-serif;
+   font-size: 9.5rem;
+   font-weight: 900;
+   line-height: 1;
+   color: #fff5cf;
+   transition: all 0.1s ease-in-out;
+}
+
+.banner-cont {
+   width: 100vw;
+   display: flex;
+   justify-content: space-between;
+}
+
+.passes-box {
+   width: 30%;
+   padding: 25px 25px 30px;
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   margin: 25px 25px 0px;
+   background-color: #fff5cf;
+   border-radius: 15px;
+   text-align: left;
+   box-shadow: -10px -3px #b74c00be;
+}
+
+.pass-head {
+   font-family: Roboto, sans-serif;
+   font-size: 2.6rem;
+   font-weight: 800;
+   margin: 10px 0px;
+}
+
+.pass-text {
+   font-family: Roboto, sans-serif;
+   font-size: 0.96rem;
+   font-weight: 400;
+   font-style: italic;
+   margin-bottom: 10px;
+   line-height: 1.2;
+}
+
+.pass-btn-box {
+   align-self: end;
+}
+
+.pass-btn {
+   padding: 8px 30px;
+   font-family: Roboto, sans-serif;
+   font-size: 1.2rem;
+   font-weight: 400;
+   background-color: transparent;
+   border-radius: 5px;
+   border: none;
+   border-bottom: 1px solid black;
+   outline: 1px solid black;
+   outline-offset: 0px 0px -5px;
+
+   /* background-color: brown;
+  border: 5px solid yellow; 
+  outline: 5px solid blue;
+  outline-offset: -20px; */
+}
+
+
+.sub-text-25 {
+   width: 70%;
+   border: 2px solid black;
+   display: flex;
+   flex-direction: column;
+   align-items: end;
+   justify-content: center;
+   padding: 25px;
 }
 
 /* Orange Banner Ends */
