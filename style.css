@@ -1867,20 +1867,21 @@ body {
 
    .foot-gear {
       margin: 15px 0px 0px;
-      height: 100px;
-      width: 100px;
+      height: 23vw;
+      width: 23vw;
    }
 
    .foot-logo {
       margin: 15px 0px 0px;
-      height: 100px;
-      width: 140px;
+      height: 23vw;
+      width: 120px;
    }
 
    .logo-des {
       font-family: Roboto, sans-serif;
-      font-size: 0.9rem;
-      line-height: 1.2;
+      font-size: 0.92rem;
+      font-weight: 600;
+      line-height: 1.3;
       margin: 0px;
       padding: 15px 2px !important;
       width: 100%;
@@ -1911,7 +1912,7 @@ body {
    }
 
    .copyright {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       margin: 10px;
    }
 
