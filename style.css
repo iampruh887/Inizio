@@ -1846,11 +1846,11 @@ body {
    }
 
    .slider-2>.slider {
-      padding: 8px 0px;
+      padding: 6px 0px;
    }
 
    .slider-2>.slider>.slide {
-      padding: 0px 12px;
+      padding: 0px 9px;
    }
 
    .slider-2>.slider>.slide>.slide-img {
@@ -1874,6 +1874,7 @@ body {
    .slide-img {
       border-radius: 12px;
       padding: 8px 12px;
+      border-width: 2px;
    }
 
    .slide-name {
