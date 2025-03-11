@@ -2076,6 +2076,13 @@ body {
       letter-spacing: 0px;
    }
 
+   .home-banner {
+      height: calc(80vh - 25px);
+   }
+
+   .home-ban-text {
+      justify-content: end;
+   }
 
    .home-title {
       font-size: clamp(2rem, 10vw, 3.5rem);
@@ -2099,23 +2106,15 @@ body {
       justify-content: flex-end;
    }
 
-   .pass-head {
-      font-size: 2.1rem;
-   }
-
    .sub-text-25 {
       width: 100%;
       padding: 25px 7vw 25px 25px;
    }
 
    .head-25 {
-      font-size: 4.8rem;
+      font-size: 3.4rem;
       margin-bottom: 10px;
-      height: 52px;
-   }
-
-   .text-25 {
-      font-size: 1.5rem;
+      height: 38px;
    }
 
 }
