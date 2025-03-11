@@ -2077,7 +2077,7 @@ body {
    }
 
    .home-banner {
-      height: calc(80vh - 25px);
+      height: calc(85vh - 25px);
    }
 
    .home-ban-text {
@@ -2100,15 +2100,23 @@ body {
    }
 
    .passes-box {
-      width: 75%;
-      padding: 20px 20px 30px;
+      width: 80%;
+      padding: 10px 10px 30px;
       margin: 0px;
       justify-content: flex-end;
    }
 
+   .pass-head{
+      font-size: 1.6rem;
+   }
+
+   .pass-btn{
+      font-size: 0.8rem;
+   }
+
    .sub-text-25 {
       width: 100%;
-      padding: 25px 7vw 25px 25px;
+      padding: 15px 7vw 25px 25px;
    }
 
    .head-25 {
