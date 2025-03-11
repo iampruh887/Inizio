@@ -81,9 +81,10 @@ body {
    position: fixed;
    width: 100vw;
    z-index: 10;
-   background-color: rgba(255, 107, 0, 0.3);
-   -webkit-backdrop-filter: blur(4px);
-   backdrop-filter: blur(4px);
+   /* background-color: rgba(255, 107, 0, 0.3); */
+   background: linear-gradient(0deg, rgba(255, 107, 60, 0), rgba(255, 107, 60, 0.3), rgba(255, 107, 60, 0.6));
+   -webkit-backdrop-filter: blur(0px);
+   backdrop-filter: blur(0px);
 }
 
 .navigation {
@@ -347,8 +348,6 @@ body {
 /* Phone Navbar Ends Here  */
 
 
-
-
 /* BODY OF PAGE BEGINS HERE */
 
 /*SPONSOR PAGE CLASSES*/
@@ -393,7 +392,7 @@ body {
 
 
 .home-banner {
-   height: calc(90vh + 25px);
+   height: calc(85vh + 25px);
 }
 
 .home-banner>div {
