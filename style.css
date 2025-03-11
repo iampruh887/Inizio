@@ -597,10 +597,6 @@ body {
 /* sponsors list Ends */
 
 /* SPONSORS PAGE CLASSES ENDS */
-/* LANDING PAGE CLASSES STARTS */
-
-/* Banner Starts */
-/* Banner Ends */
 
 /* Body Starts */
 
@@ -1096,17 +1092,14 @@ body {
    }
 }
 
-
 /* Body Ends */
-/* LANDING PAGE CLASSES ENDS */
-
 
 
 /* Footer Starts */
 .footer {
    bottom: 50px;
    background-color: #131313;
-   padding: 20px;
+   padding: 20px 20px 0px;
 }
 
 .foot-content {
@@ -1120,7 +1113,7 @@ body {
 }
 
 .f-logo-box {
-   margin: 90px 0px;
+   margin: 40px 0px 40px 40px;
    transition: all 0.1s ease-in-out;
 }
 
@@ -1140,7 +1133,7 @@ body {
    background-position: center;
    height: 160px;
    width: 160px;
-   margin: 30px 0px;
+   margin: 15px 0px;
    transition: all 0.1s ease-in-out;
 
 }
@@ -1152,7 +1145,7 @@ body {
    background-position: center;
    width: 150px;
    height: 120px;
-   margin: 30px 0px;
+   margin: 20px 0px;
    transition: all 0.1s ease-in-out;
 }
 
@@ -1172,12 +1165,12 @@ body {
    justify-content: center;
    flex-wrap: wrap;
    color: #ffffff;
-   margin: 90px 0px;
+   margin: 40px 0px;
    transition: all 0.1s ease-in-out;
 }
 
 .foot-text>div {
-   margin: 30px 20px;
+   margin: 10px 20px;
    text-align: center;
    transition: all 0.1s ease-in-out;
 }
@@ -1187,7 +1180,7 @@ body {
    font-family: Arial, Helvetica, sans-serif;
    font-weight: 600;
    font-size: 2rem;
-   margin: 10px 20px 50px;
+   margin: 10px 20px 30px;
    transition: all 0.1s ease-in-out;
 }
 
@@ -1196,7 +1189,7 @@ body {
    font-weight: 400;
    letter-spacing: 1px;
    font-size: 1.45rem;
-   margin: 15px 0px;
+   margin: 10px 0px;
    transition: all 0.1s ease-in-out;
 }
 
@@ -1261,10 +1254,6 @@ body {
    .foot-text>div {
       margin-bottom: 10px;
    }
-
-   .f-logo-box {
-      margin-left: 60px;
-   }
 }
 
 
@@ -1272,6 +1261,14 @@ body {
 @media (max-width: 1280px) {
    .f-logo-box, .foot-text {
       margin: 30px 0px 10px;
+   }
+
+   .f-logo-box {
+      width: 40%;
+   }
+
+   .foot-text {
+      width: 60%;
    }
 
    .wide {
@@ -1411,16 +1408,16 @@ body {
    .logo-des {
       font-size: 1.1rem;
       margin: 0px;
-      padding: 10px 20px !important;
+      padding: 10px 15px !important;
       width: 100%;
    }
 
    .foot-text>div {
-      margin: 20px;
+      margin: 10px;
    }
 
    .foot-text>div>h4 {
-      margin: 10px 20px 30px;
+      margin: 10px 20px 20px;
    }
 
    .copyright {
@@ -1499,7 +1496,6 @@ body {
       width: 70%;
    }
 
-
    .guest-text {
       padding-left: 10%;
    }
@@ -1507,7 +1503,6 @@ body {
    .guest-img {
       margin: 10px 0px 10px 35px;
    }
-
 
    .guest-img-in {
       width: 30vw;
@@ -1648,9 +1643,12 @@ body {
       margin-top: 5px;
    }
 
+   .f-logo-box {
+      width: 45%;
+   }
 
-   .f-logo-box, .foot-text {
-      margin: 30px 0px 10px;
+   .foot-text {
+      width: 55%;
    }
 
    .foot-gear {
@@ -1666,16 +1664,16 @@ body {
    .logo-des {
       font-size: 1.1rem;
       margin: 0px;
-      padding: 10px 20px !important;
+      padding: 10px 15px !important;
       width: 100%;
    }
 
    .foot-text>div {
-      margin: 20px;
+      margin: 15px;
    }
 
    .foot-text>div>h4 {
-      margin: 10px 20px 30px;
+      margin: 10px 20px 20px;
    }
 
    .copyright {
@@ -1857,38 +1855,53 @@ body {
       font-size: 1.6rem;
    }
 
-   .f-logo-box, .foot-text {
-      margin: 30px 0px 10px;
+   .f-logo-box {
+      margin: 0px 0px 10px;
+      width: 100%;
+   }
+
+   .foot-text {
+      width: 100%;
+      margin: 0px 0px 10px;
    }
 
    .foot-gear {
-      width: 100%;
       margin: 20px 0px;
       height: 130px;
+      width: 130px;
    }
 
    .foot-logo {
-      width: 100%;
       margin: 20px 0px;
       height: 120px;
    }
 
    .logo-des {
-      font-size: 1rem;
+      font-size: 0.9rem;
       margin: 0px;
-      padding: 10px 20px !important;
+      padding: 10px 10px !important;
       width: 100%;
+      white-space: nowrap;
    }
 
    .foot-text>div {
-      margin: 20px;
+      margin: 10px;
    }
 
    .foot-text>div>h4 {
-      font-size: 1.8rem;
-      margin: 10px 20px 30px;
+      font-size: 1.6rem;
+      margin: 10px 20px 12px;
    }
 
+   .foot-text>div>p {
+      font-size: 1.2rem;
+      margin: 5px 0px;
+   }
+
+   .icons {
+      margin: 5px;
+
+   }
 
    .icon {
       font-size: 40px
@@ -1896,6 +1909,7 @@ body {
 
    .copyright {
       font-size: 0.9rem;
+      margin: 10px;
    }
 
 
@@ -2110,7 +2124,7 @@ body {
       font-size: 1.6rem;
    }
 
-   .pass-text{
+   .pass-text {
       font-size: 0.9rem;
       margin-bottom: 6px;
    }
