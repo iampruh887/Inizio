@@ -926,7 +926,7 @@ body {
    animation: scroll-r 40s linear infinite;
    font-size: 0;
    height: 100%;
-   padding: 40px 0px;
+   padding: 3vw 0px;
    display: flex;
 }
 
@@ -937,7 +937,7 @@ body {
 .slide {
    width: 25vw;
    align-items: baseline;
-   padding: 0px 35px;
+   padding: 0px 2.4vw;
    font-size: initial;
    height: 100%;
 }
@@ -1223,6 +1223,16 @@ body {
       font-size: 1.1rem;
    }
 
+   .slide-name {
+      font-size: 1.35rem;
+      margin: 5px 6px;
+   }
+
+   .slide-post {
+      font-size: 0.9rem;
+      margin: 0px 6px 8px;
+   }
+
 }
 
 
@@ -1401,6 +1411,57 @@ body {
    }
 
 
+
+   .alt-slider {
+      height: 80vw;
+      padding: 40px 0px;
+      margin: 90px 0px 80px;
+   }
+
+   .alt-slider-2 {
+      height: 45vw;
+   }
+
+   .slider-2 {
+      height: 33.33%;
+   }
+
+   .slider-2>.slider {
+      padding: 15px 0px;
+   }
+
+   .slider-2>.slider>.slide>.slide-img {
+      border-radius: 25px;
+   }
+
+   .slider {
+      animation: scroll-r 30s linear infinite;
+      padding: 30px 0px;
+   }
+
+   .left {
+      animation: scroll-l 30s linear infinite;
+   }
+
+   .slide {
+      width: 32vw;
+      padding: 0px 30px;
+   }
+
+   .slide-img {
+      padding: 15px;
+   }
+
+   .slide-name {
+      font-size: 1.4rem;
+      margin: 5px 6px;
+   }
+
+   .slide-post {
+      font-size: 1rem;
+      margin: 0px 6px 10px;
+   }
+
 }
 
 /* Medium Devices (Laptops, Small Desktops) */
@@ -1544,6 +1605,62 @@ body {
    .merch-size {
       width: 70%;
       margin-bottom: 40px;
+   }
+
+   .alt-slider {
+      height: 90vw;
+      padding: 25px 0px;
+      margin: 70px 0px 60px;
+   }
+
+   .alt-slider-2 {
+      height: 52vw;
+      margin: 60px 0px 30px;
+   }
+
+   .slider-2 {
+      height: 33.33%;
+   }
+
+   .slider-2>.slider {
+      padding: 10px 0px;
+   }
+
+   .slider-2>.slider>.slide {
+      padding: 0px 15px;
+   }
+
+   .slider-2>.slider>.slide>.slide-img {
+      border-radius: 25px;
+   }
+
+   .slider {
+      animation: scroll-r 25s linear infinite;
+      padding: 20px 0px;
+   }
+
+   .left {
+      animation: scroll-l 25s linear infinite;
+   }
+
+   .slide {
+      width: 35vw;
+      padding: 0px 15px;
+   }
+
+   .slide-img {
+      border-radius: 13px;
+      padding: 10px 15px;
+   }
+
+   .slide-name {
+      font-size: 1.2rem;
+      margin: 0;
+   }
+
+   .slide-post {
+      font-size: 0.85rem;
+      margin: 5px 0px;
    }
 
 }
