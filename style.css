@@ -77,17 +77,17 @@ body {
 
 /* Desktop Navbar Begins Here */
 .navbar {
-   padding-top: 15px;
+   padding-top: 5px;
    position: fixed;
    width: 100vw;
    z-index: 10;
    display: block;
    top: 0;
-   transition: all 0.2s ease-in-out;
-   /* background-color: rgba(255, 107, 0, 0.3); */
-   background: linear-gradient(0deg, rgba(255, 107, 60, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
-   -webkit-backdrop-filter: blur(0px);
-   backdrop-filter: blur(0px);
+   background-color: hsla(26, 100%, 97%, 0.1);
+   /* background: linear-gradient(0deg, rgba(255, 107, 60, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+   -webkit-backdrop-filter: blur(0px); */
+   -webkit-backdrop-filter: blur(10px);
+   backdrop-filter: blur(10px);
 }
 
 .navigation {
@@ -99,9 +99,9 @@ body {
 
 .logo>a>img {
    background-size: contain;
-   height: 50px;
-   width: 100px;
-   margin: 0px 25px 5px;
+   height: auto;
+   width: 50px;
+   margin: 3px 5px 3px 40px;
    transition: all 0.2s ease-in-out;
 }
 
@@ -109,8 +109,9 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 4vw;
-   width: 4vw;
+   height: 2.5vw;
+   width: 2.5vw;
+   margin: 5px;
 }
 
 .gear>a>img:hover {
@@ -118,8 +119,8 @@ body {
 }
 
 .gear>a>img {
-   height: 80%;
-   width: 80%;
+   height: 100%;
+   width: 100%;
    transition: all 1s ease-in-out;
 }
 
@@ -131,16 +132,10 @@ body {
    width: 100%;
 }
 
-
-.gear>img {
-   height: 4vw;
-   width: 4vw;
-}
-
 .nav-btn>a {
    font-family: sans-serif;
-   font-size: 1.2rem;
-   color: #fff;
+   font-size: 0.8rem;
+   color: #000000;
    text-decoration: none;
    letter-spacing: 2px;
 }
@@ -150,6 +145,10 @@ body {
    left: -40px;
    width: 14vw;
    margin-right: 2vw;
+}
+
+.gear-right>a>h3 {
+   white-space: nowrap;
 }
 
 #nav-cont {
@@ -349,7 +348,7 @@ body {
 .gear-rot {
    transform: rotate(270deg);
    transition: all 1.5s ease-out;
-   
+
 }
 
 .anti-rot {
@@ -509,7 +508,7 @@ body {
    color: #fff5cf;
    overflow: hidden;
    line-height: 1;
-   height: 95px;
+   height: 90px;
    margin-bottom: 20px;
 }
 
@@ -659,6 +658,11 @@ body {
    color: #ff6b00;
    transition: all 0.1s ease-in-out;
    letter-spacing: 1px;
+}
+
+.headline-l-sponsor {
+   margin: 5px 0px;
+   display: block !important;
 }
 
 .hid-des {
