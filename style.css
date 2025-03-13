@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
 * {
    padding: 0px;
@@ -12,6 +13,14 @@
 
 @font-face {
    font-family: 'Roboto';
+   font-stretch: PERCENTAGE_RANGE_LOW_TO_HIGH;
+   font-style: NORMAL_OR_ITALIC;
+   font-weight: NUMERIC_RANGE_LOW_TO_HIGH;
+   src: url(FONT_FILE_NAME.woff2) format('woff2');
+}
+
+@font-face {
+   font-family: 'Lexend';
    font-stretch: PERCENTAGE_RANGE_LOW_TO_HIGH;
    font-style: NORMAL_OR_ITALIC;
    font-weight: NUMERIC_RANGE_LOW_TO_HIGH;
@@ -386,7 +395,7 @@ body {
    background-color: transparent;
 }
 
-.banner>div {
+.ban-box {
    display: flex;
    flex-direction: column;
    text-align: center;
@@ -538,6 +547,78 @@ body {
    text-align: right;
 
 }
+
+.team-banner {
+   height: 112vh;
+}
+
+.team-box {
+   position: relative;
+}
+
+.team-pic {
+   background-color: black;
+   overflow: hidden;
+}
+
+.team-pic>img {
+   height: 73vh;
+   transform: scale(1.02);
+   opacity: 0.9;
+}
+
+.team-pic>img:hover {
+   transform: scale(1.05);
+   z-index: 1;
+   transition: all 0.5s ease-in-out;
+}
+
+.team-hollow-title, .team-full-title, .team-star-title {
+   font-size: 7vw;
+   font-family: PoppinsExtraBold, sans-serif;
+   color: #fff5cf;
+   transition: all 0.1s ease-in-out;
+   position: absolute;
+   line-height: 1;
+   z-index: 10;
+}
+
+
+.team-hollow-title>h2 {
+   position: relative;
+   transform: translate(-20%, -60%);
+   color: transparent;
+   stroke: #fff5cf;
+   stroke-width: 3px;
+   -webkit-text-stroke-width: 3px;
+   -webkit-text-stroke-color: #fff5cf;
+}
+
+.team-star-title {
+   top: 0px;
+   right: 0px;
+}
+
+.team-star-title>h2 {
+   position: relative;
+   transform: translate(30%, -30%);
+   font-size: 20rem;
+   top: -18%;
+   right: -10%;
+}
+
+.team-full-title {
+   bottom: 0px;
+   right: 0px;
+}
+
+.team-full-title>h2 {
+   position: relative;
+   transform: translate(25%, 40%);
+   font-family: Lexend, sans-serif;
+   font-weight: 800;
+}
+
 
 /* Orange Banner Ends */
 
