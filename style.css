@@ -699,9 +699,11 @@ body {
    transform: rotate(-90deg);
    margin: 0px -5px;
    font-family: Lexend, sans-serif, Arial;
-   font-size: 1.1rem;
+   font-size: 1rem;
    font-weight: 300;
    text-transform: lowercase;
+   line-height: 1;
+   /* white-space: nowrap; */
 }
 
 .mem-post {
@@ -1683,7 +1685,7 @@ body {
 
    .mem-data>div {
       margin: 0px -5px;
-      font-size: 1.1rem;
+      font-size: 1rem;
    }
 
    .mem-img>img {
@@ -2050,7 +2052,7 @@ body {
 
    .mem-data>div {
       margin: 0px -8px;
-      font-size: 1.1rem;
+      font-size: 1rem;
    }
 
    .mem-img>img {
