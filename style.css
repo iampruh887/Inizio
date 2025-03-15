@@ -11,6 +11,10 @@
    /* box-sizing: border-box; */
 }
 
+a {
+   text-decoration: none;
+}
+
 @font-face {
    font-family: 'Roboto';
    font-stretch: PERCENTAGE_RANGE_LOW_TO_HIGH;
@@ -548,11 +552,17 @@ body {
 
 }
 
+
+
+/* TEAMS PAGE STARTS HERE */
+
+
 .team-banner {
    height: 112vh;
+
 }
 
-.team-box {
+.team-layout {
    position: relative;
 }
 
@@ -564,12 +574,13 @@ body {
 .team-pic>img {
    height: 73vh;
    transform: scale(1.02);
-   opacity: 0.9;
+   opacity: 1;
 }
 
 .team-pic>img:hover {
    transform: scale(1.05);
    z-index: 1;
+   opacity: 0.95;
    transition: all 0.5s ease-in-out;
 }
 
@@ -617,8 +628,135 @@ body {
    transform: translate(25%, 40%);
    font-family: Lexend, sans-serif;
    font-weight: 800;
+   line-height: 1;
 }
 
+.all-teams {
+   margin: 50px 80px 0px 7vw;
+}
+
+
+.team-title {
+   display: inline-block;
+}
+
+.team-title>h4 {
+   font-family: Lexend, Areal, sans-serif !important;
+   font-size: 3.2rem;
+   font-weight: 500;
+}
+
+.team-title>hr {
+   width: 50%;
+   height: 2px;
+   border: none;
+   background-image: linear-gradient(90deg,
+         #ff9f5a 0%,
+         #ff6b00 100%);
+   border-radius: 10px;
+   margin-top: 8px;
+}
+
+.team-box {
+   margin: 10px 0px 0px 8vw;
+}
+
+.team-des {
+   font-size: 1.2rem;
+}
+
+.team-list {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   margin: 40px 0px 120px;
+}
+
+.member {
+   width: 30%;
+   padding: 40px 15px 20px 35px;
+   margin: 0px 3.33% 0px 0px;
+}
+
+.member>div {
+   position: relative;
+}
+
+.mem-data {
+   position: absolute;
+   bottom: 0px;
+}
+
+.mem-data>div {
+   transform-origin: 0% 100%;
+   transform: rotate(-90deg);
+   margin: 5px -10px;
+   font-family: Lexend, sans-serif, Arial;
+   font-size: 1.4rem;
+   font-weight: 300;
+   text-transform: lowercase;
+}
+
+.mem-post {
+   color: #ff6b00;
+}
+
+.mem-img {
+   overflow: hidden;
+}
+
+.mem-img>img {
+   width: 100%;
+   aspect-ratio: 0.9;
+   scale: 1.05;
+   object-fit: cover;
+   object-position: 50% 30%;
+}
+
+.mem-contact {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   width: 50%;
+   margin: 10px 0px;
+}
+
+.mem-contact>a {
+   color: #9f9f9f;
+   font-size: 1.6rem;
+}
+
+
+.t-insta:hover, .t-insta:active {
+   background: linear-gradient(45deg, #feda77,
+         #f58529, #dd2a7b, #bc2a8d 100%);
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+   background-clip: text;
+}
+
+.t-linkedin:hover, .t-linkedin:active {
+   background: linear-gradient(45deg, #004a99,
+         #1cb3ff 100%);
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+   background-clip: text;
+}
+
+.t-phone:hover, .t-phone:active {
+   background: linear-gradient(180deg, rgb(0, 255, 8),
+         #06b100 100%);
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+   background-clip: text;
+}
+
+.t-phone {
+   font-size: 1.3rem !important;
+}
+
+/* TEAMS PAGE ENDS HERE */
 
 /* Orange Banner Ends */
 
@@ -636,10 +774,8 @@ body {
    bottom: 0px;
    margin-bottom: 0px;
    border-radius: 0px 25px 25px 0px;
-   position: relative;
-   right: 50px;
+   width: 90vw;
 }
-
 
 .body-content {
    width: 100%;
