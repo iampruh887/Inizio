@@ -559,7 +559,6 @@ body {
 
 .team-banner {
    height: 112vh;
-
 }
 
 .team-layout {
@@ -575,17 +574,18 @@ body {
    height: 73vh;
    transform: scale(1.02);
    opacity: 1;
+   transition: all 0.5s ease-in-out;
 }
 
 .team-pic>img:hover {
    transform: scale(1.05);
    z-index: 1;
    opacity: 0.95;
-   transition: all 0.5s ease-in-out;
 }
 
 .team-hollow-title, .team-full-title, .team-star-title {
    font-size: 7vw;
+   white-space: nowrap;
    font-family: PoppinsExtraBold, sans-serif;
    color: #fff5cf;
    transition: all 0.1s ease-in-out;
@@ -594,10 +594,14 @@ body {
    z-index: 5;
 }
 
+.team-star-title {
+   top: 0px;
+   right: 0px;
+}
 
 .team-hollow-title>h2 {
    position: relative;
-   transform: translate(-20%, -60%);
+   transform: translate(-30%, -60%);
    color: transparent;
    stroke: #fff5cf;
    stroke-width: 3px;
@@ -605,17 +609,11 @@ body {
    -webkit-text-stroke-color: #fff5cf;
 }
 
-.team-star-title {
-   top: 0px;
-   right: 0px;
-}
 
 .team-star-title>h2 {
    position: relative;
-   transform: translate(30%, -30%);
-   font-size: 20rem;
-   top: -18%;
-   right: -10%;
+   transform: translate(40%, -30%);
+   font-size: 20vw;
 }
 
 .team-full-title {
@@ -631,13 +629,15 @@ body {
    line-height: 1;
 }
 
-.all-teams {
-   margin: 50px 80px 0px 7vw;
-}
 
+
+.all-teams {
+   margin: -30px 3vw 0px 7vw;
+}
 
 .team-title {
    display: inline-block;
+   margin-top: 80px;
 }
 
 .team-title>h4 {
@@ -669,7 +669,7 @@ body {
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
-   margin: 40px 0px 100px;
+   margin: 40px 0px 10px;
 }
 
 .member {
@@ -723,10 +723,14 @@ body {
 }
 
 .mem-contact>a {
-   color: #9f9f9f;
+   color: #808080;
    font-size: 1.6rem;
 }
 
+
+.t-phone {
+   font-size: 1.3rem !important;
+}
 
 .t-insta:hover, .t-insta:active {
    background: linear-gradient(45deg, #feda77,
@@ -745,16 +749,13 @@ body {
 }
 
 .t-phone:hover, .t-phone:active {
-   background: linear-gradient(180deg, rgb(0, 255, 8),
+   background: linear-gradient(0deg, rgb(0, 255, 8),
          #06b100 100%);
    -webkit-text-fill-color: transparent;
    -webkit-background-clip: text;
    background-clip: text;
 }
 
-.t-phone {
-   font-size: 1.3rem !important;
-}
 
 /* TEAMS PAGE ENDS HERE */
 
@@ -1611,6 +1612,94 @@ body {
       font-size: 2rem;
    }
 
+
+   .team-banner {
+      height: 105vh;
+   }
+
+   .team-pic>img {
+      height: 69vh;
+   }
+
+   .team-hollow-title, .team-full-title, .team-star-title {
+      font-size: 5.5vw;
+   }
+
+   .team-hollow-title>h2 {
+      transform: translate(-20%, -60%);
+      stroke-width: 2px;
+      -webkit-text-stroke-width: 2px;
+   }
+
+   .team-star-title>h2 {
+      transform: translate(40%, -30%);
+      font-size: 20vw;
+   }
+
+   .team-full-title>h2 {
+      transform: translate(20%, 40%);
+   }
+
+
+
+
+   .all-teams {
+      margin: -30px 2.5vw 0px 7vw;
+   }
+
+   .team-title {
+      margin-top: 80px;
+   }
+
+   .team-title>h4 {
+      font-size: 2.5rem;
+   }
+
+   .team-title>hr {
+      margin-top: 8px;
+   }
+
+   .team-box {
+      margin: 10px 0px 0px 8vw;
+   }
+
+   .team-des {
+      font-size: 0.95rem;
+   }
+
+   .team-list {
+      margin: 40px 0px 10px;
+   }
+
+   .member {
+      width: 30%;
+      padding: 20px 15px 20px 25px;
+      margin: 0px 3.33% 0px 0px;
+   }
+
+   .mem-data>div {
+      margin: 0px -5px;
+      font-size: 1.1rem;
+   }
+
+   .mem-img>img {
+      scale: 1.05;
+      object-position: 50% 30%;
+   }
+
+   .mem-contact {
+      width: 70%;
+      margin: 10px 0px;
+   }
+
+   .mem-contact>a {
+      font-size: 1.3rem;
+   }
+
+   .t-phone {
+      font-size: 1.1rem !important;
+   }
+
 }
 
 
@@ -1877,6 +1966,48 @@ body {
       font-size: 1.8rem;
    }
 
+
+   .team-banner {
+      height: 100vh;
+   }
+
+   .team-layout {
+      margin-top: 40px;
+   }
+
+   .team-pic>img {
+      height: auto;
+      width: 85vw;
+   }
+
+   .team-hollow-title, .team-full-title, .team-star-title {
+      font-size: clamp(3rem, 4.5vw, 4rem);
+   }
+
+   .team-hollow-title {
+      top: 0px;
+      left: 50%;
+   }
+
+   .team-full-title {
+      bottom: 0px;
+      right: 50%;
+   }
+
+   .team-hollow-title>h2 {
+      transform: translate(-50%, -60%);
+   }
+
+   .team-star-title>h2 {
+      transform: translate(40%, -30%);
+      font-size: 20vw;
+   }
+
+   .team-full-title>h2 {
+      transform: translate(50%, 40%);
+   }
+
+
 }
 
 /* Medium Devices (Laptops, Small Desktops) */
@@ -2107,6 +2238,47 @@ body {
 
    .text-25 {
       font-size: 1.5rem;
+   }
+
+
+   .team-banner {
+      height: 90vh;
+   }
+
+   .team-layout {
+      margin-top: 40px;
+   }
+
+   .team-pic>img {
+      height: auto;
+      width: 85vw;
+   }
+
+   .team-hollow-title, .team-full-title, .team-star-title {
+      font-size: clamp(3rem, 4.5vw, 4rem);
+   }
+
+   .team-hollow-title {
+      top: 0px;
+      left: 50%;
+   }
+
+   .team-full-title {
+      bottom: 0px;
+      right: 50%;
+   }
+
+   .team-hollow-title>h2 {
+      transform: translate(-50%, -60%);
+   }
+
+   .team-star-title>h2 {
+      transform: translate(40%, -30%);
+      font-size: 20vw;
+   }
+
+   .team-full-title>h2 {
+      transform: translate(50%, 40%);
    }
 
 }
