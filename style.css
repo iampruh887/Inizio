@@ -1776,7 +1776,7 @@ body {
    }
 
    .copyright {
-      font-size: 1.1rem;
+      font-size: 1.1rem !important;
    }
 
    .wide {
@@ -2134,7 +2134,7 @@ body {
    }
 
    .copyright {
-      font-size: 1.1rem;
+      font-size: 1.1rem !important;
    }
 
 
@@ -2472,7 +2472,7 @@ body {
    }
 
    .copyright {
-      font-size: 0.8rem;
+      font-size: 0.8rem !important;
       margin: 10px;
    }
 
