@@ -2762,7 +2762,7 @@ body {
    }
 
    .all-teams {
-      margin: -30px 2.5vw 0px 8vw;
+      margin: -30px 3vw 0px 8vw;
    }
 
    .team-title {
@@ -2778,7 +2778,7 @@ body {
    }
 
    .team-box {
-      margin: 10px 0px 0px 4vw;
+      margin: 10px 0vw 0px 4vw;
    }
 
    .team-des {
@@ -2791,31 +2791,18 @@ body {
 
    .member {
       width: 90%;
-      padding: 15px 15px 15px 25px;
-      margin: 0px 6% 0px 0px;
+      padding: 15px 15px 15px 30px;
+      margin: 0px 10% 0px 0px;
    }
 
    .mem-data>div {
       margin: 0px -8px;
-      font-size: 1rem;
+      font-size: 1.2rem;
    }
 
    .mem-img>img {
       scale: 1.05;
       object-position: 50% 30%;
-   }
-
-   .mem-contact {
-      width: 70%;
-      margin: 10px 0px;
-   }
-
-   .mem-contact>a {
-      font-size: 1.4rem;
-   }
-
-   .t-phone {
-      font-size: 1.1rem !important;
    }
 
 }
