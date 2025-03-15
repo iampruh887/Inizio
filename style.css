@@ -638,7 +638,6 @@ body {
 }
 
 
-
 .all-teams {
    margin: -30px 3vw 0px 7vw;
 }
@@ -2734,15 +2733,22 @@ body {
    .team-hollow-title {
       top: 0px;
       left: 50%;
+      transform: translateX(-50%);
    }
 
    .team-full-title {
       bottom: 0px;
       right: 50%;
+      transform: translateX(50%);
+
    }
 
    .team-hollow-title>h2 {
-      transform: translate(-50%, -120%);
+      transform: translate(0%, -120%);
+   }
+
+   .team-full-title>h2 {
+      transform: translate(0%, 120%);
    }
 
    .team-star-title>h2 {
@@ -2750,9 +2756,6 @@ body {
       font-size: 22vw;
    }
 
-   .team-full-title>h2 {
-      transform: translate(50%, 120%);
-   }
 
    .teams-overlay {
       width: 94%;
@@ -2787,7 +2790,7 @@ body {
    }
 
    .member {
-      width: 44%;
+      width: 90%;
       padding: 15px 15px 15px 25px;
       margin: 0px 6% 0px 0px;
    }
