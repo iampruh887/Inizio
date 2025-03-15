@@ -591,7 +591,7 @@ body {
    transition: all 0.1s ease-in-out;
    position: absolute;
    line-height: 1;
-   z-index: 10;
+   z-index: 5;
 }
 
 
@@ -642,7 +642,7 @@ body {
 
 .team-title>h4 {
    font-family: Lexend, Areal, sans-serif !important;
-   font-size: 3.2rem;
+   font-size: 2.5rem;
    font-weight: 500;
 }
 
@@ -662,20 +662,20 @@ body {
 }
 
 .team-des {
-   font-size: 1.2rem;
+   font-size: 0.95rem;
 }
 
 .team-list {
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
-   margin: 40px 0px 120px;
+   margin: 40px 0px 100px;
 }
 
 .member {
-   width: 30%;
-   padding: 40px 15px 20px 35px;
-   margin: 0px 3.33% 0px 0px;
+   width: 28%;
+   padding: 20px 15px 20px 25px;
+   margin: 0px 5.33% 0px 0px;
 }
 
 .member>div {
@@ -690,9 +690,9 @@ body {
 .mem-data>div {
    transform-origin: 0% 100%;
    transform: rotate(-90deg);
-   margin: 5px -10px;
+   margin: 0px -5px;
    font-family: Lexend, sans-serif, Arial;
-   font-size: 1.4rem;
+   font-size: 1.1rem;
    font-weight: 300;
    text-transform: lowercase;
 }
