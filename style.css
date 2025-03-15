@@ -587,6 +587,7 @@ body {
    top: 0px;
    left: 0px;
 }
+
 .team-star-title {
    top: 0px;
    right: 0px;
@@ -1647,9 +1648,6 @@ body {
       transform: translate(20%, 40%);
    }
 
-
-
-
    .all-teams {
       margin: -30px 2.5vw 0px 7vw;
    }
@@ -2013,6 +2011,66 @@ body {
       transform: translate(50%, 40%);
    }
 
+   .teams-overlay {
+      width: 94%;
+   }
+
+   .all-teams {
+      margin: -30px 2.5vw 0px 7vw;
+   }
+
+   .team-title {
+      margin-top: 40px;
+   }
+
+   .team-title>h4 {
+      font-size: 2.4rem;
+   }
+
+   .team-title>hr {
+      margin-top: 8px;
+   }
+
+   .team-box {
+      margin: 10px 0px 0px 8vw;
+   }
+
+   .team-des {
+      font-size: 0.85rem;
+   }
+
+   .team-list {
+      margin: 40px 0px 10px;
+   }
+
+   .member {
+      width: 44%;
+      padding: 20px 15px 20px 25px;
+      margin: 0px 6% 0px 0px;
+   }
+
+   .mem-data>div {
+      margin: 0px -8px;
+      font-size: 1.1rem;
+   }
+
+   .mem-img>img {
+      scale: 1.05;
+      object-position: 50% 30%;
+   }
+
+   .mem-contact {
+      width: 70%;
+      margin: 10px 0px;
+   }
+
+   .mem-contact>a {
+      font-size: 1.4rem;
+   }
+
+   .t-phone {
+      font-size: 1.1rem !important;
+   }
 
 }
 
@@ -2261,7 +2319,7 @@ body {
    }
 
    .team-hollow-title, .team-full-title, .team-star-title {
-      font-size: 6.5vw;
+      font-size: 7vw;
    }
 
    .team-hollow-title {
@@ -2285,6 +2343,67 @@ body {
 
    .team-full-title>h2 {
       transform: translate(50%, 40%);
+   }
+
+   .teams-overlay {
+      width: 94%;
+   }
+
+   .all-teams {
+      margin: -30px 2.5vw 0px 8vw;
+   }
+
+   .team-title {
+      margin-top: 20px;
+   }
+
+   .team-title>h4 {
+      font-size: 2.1rem;
+   }
+
+   .team-title>hr {
+      margin-top: 6px;
+   }
+
+   .team-box {
+      margin: 10px 0px 0px 4vw;
+   }
+
+   .team-des {
+      font-size: 0.85rem;
+   }
+
+   .team-list {
+      margin: 20px 0px 10px;
+   }
+
+   .member {
+      width: 44%;
+      padding: 15px 15px 15px 25px;
+      margin: 0px 6% 0px 0px;
+   }
+
+   .mem-data>div {
+      margin: 0px -8px;
+      font-size: 1rem;
+   }
+
+   .mem-img>img {
+      scale: 1.05;
+      object-position: 50% 30%;
+   }
+
+   .mem-contact {
+      width: 70%;
+      margin: 10px 0px;
+   }
+
+   .mem-contact>a {
+      font-size: 1.4rem;
+   }
+
+   .t-phone {
+      font-size: 1.1rem !important;
    }
 
 }
@@ -2590,6 +2709,110 @@ body {
 
    .text-25 {
       font-size: 1.3rem;
+   }
+
+
+
+
+   .team-banner {
+      height: 80vh;
+   }
+
+   .team-layout {
+      margin-top: 10px;
+   }
+
+   .team-pic>img {
+      height: auto;
+      width: 88vw;
+   }
+
+   .team-hollow-title, .team-full-title, .team-star-title {
+      font-size: 10vw;
+   }
+
+   .team-hollow-title {
+      top: 0px;
+      left: 50%;
+   }
+
+   .team-full-title {
+      bottom: 0px;
+      right: 50%;
+   }
+
+   .team-hollow-title>h2 {
+      transform: translate(-50%, -120%);
+   }
+
+   .team-star-title>h2 {
+      transform: translate(40%, -30%);
+      font-size: 22vw;
+   }
+
+   .team-full-title>h2 {
+      transform: translate(50%, 120%);
+   }
+
+   .teams-overlay {
+      width: 94%;
+   }
+
+   .all-teams {
+      margin: -30px 2.5vw 0px 8vw;
+   }
+
+   .team-title {
+      margin-top: 20px;
+   }
+
+   .team-title>h4 {
+      font-size: 2.1rem;
+   }
+
+   .team-title>hr {
+      margin-top: 6px;
+   }
+
+   .team-box {
+      margin: 10px 0px 0px 4vw;
+   }
+
+   .team-des {
+      font-size: 0.85rem;
+   }
+
+   .team-list {
+      margin: 20px 0px 10px;
+   }
+
+   .member {
+      width: 44%;
+      padding: 15px 15px 15px 25px;
+      margin: 0px 6% 0px 0px;
+   }
+
+   .mem-data>div {
+      margin: 0px -8px;
+      font-size: 1rem;
+   }
+
+   .mem-img>img {
+      scale: 1.05;
+      object-position: 50% 30%;
+   }
+
+   .mem-contact {
+      width: 70%;
+      margin: 10px 0px;
+   }
+
+   .mem-contact>a {
+      font-size: 1.4rem;
+   }
+
+   .t-phone {
+      font-size: 1.1rem !important;
    }
 
 }
