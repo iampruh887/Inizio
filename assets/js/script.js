@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       navPanel.classList.add("nav-show");
       navPanel.classList.remove("nav-hide");
    });
-   
+
    dimmer.addEventListener("click", function () {
       dimmer.classList.toggle("dim-show");
       rot.classList.add("anti-rot");
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
       navPanel.classList.add("nav-hide");
       navPanel.classList.remove("nav-show");
    });
-   
+
    cross.addEventListener("click", function () {
       dimmer.classList.toggle("dim-show");
       rot.classList.add("anti-rot");
@@ -74,21 +74,50 @@ document.addEventListener("DOMContentLoaded", function () {
          lazyloadThrottleTimeout = setTimeout(function () {
             var scrollTop = window.pageYOffset;
             lazyloadImages.forEach(function (img) {
-            if (img.offsetTop < (window.innerHeight + scrollTop)) {
-               img.src = img.dataset.src;
-               img.classList.remove('lazy');
+               if (img.offsetTop < (window.innerHeight + scrollTop)) {
+                  img.src = img.dataset.src;
+                  img.classList.remove('lazy');
+               }
+            });
+            if (lazyloadImages.length == 0) {
+               document.removeEventListener("scroll", lazyload);
+               window.removeEventListener("resize", lazyload);
+               window.removeEventListener("orientationChange", lazyload);
             }
-         });
-         if (lazyloadImages.length == 0) {
-            document.removeEventListener("scroll", lazyload);
-            window.removeEventListener("resize", lazyload);
-            window.removeEventListener("orientationChange", lazyload);
-         }
-      }, 20);
-   }
+         }, 20);
+      }
 
-   document.addEventListener("scroll", lazyload);
-   window.addEventListener("resize", lazyload);
-   window.addEventListener("orientationChange", lazyload);
+      document.addEventListener("scroll", lazyload);
+      window.addEventListener("resize", lazyload);
+      window.addEventListener("orientationChange", lazyload);
    }
 })
+
+
+
+let hash = document.querySelector(".event-num");
+let p = document.querySelector(".ev-bio");
+let events = document.querySelector(".event-name");
+function delay(ms) {
+   return new Promise(resolve => setTimeout(resolve, ms));
+}
+async function run() {
+   hash.innerHTML = `#001`;
+   p.innerHTML = 'Gear up for an electrifying event at IIIT\'s fest! Teams of 4 will battle in two rounds: a quiz to secure a franchise spot, followed by a high-stakes player auction. With 100 crores, build your dream team of 12 players while balancing Indian and overseas stars. Master the bidding war, strategize your picks, and aim for the highest team rating to win. Will you outsmart the competition? Join the thrill and showcase your cricketing genius!';
+   events.innerHTML = '@IPL Auction 2.O';
+   await delay(4000);
+
+   hash.innerHTML = `#002`;
+   p.innerHTML = "Unleash your creativity in this week-long Instagram marketing showdown! Teams of 4-5 will craft and run a dynamic campaign for a given product, posting daily content, reels, and stories to maximize engagement. After 6 days of strategizing and engaging, teams will pitch their campaign results to a panel of judges. Showcase your skills in analytics, content creation, and storytelling to win exciting rewards!Join the challenge and prove your marketing prowess!";
+   events.innerHTML = '@Digital Challenge';
+   await delay(4000);
+}
+
+async function run_anim() {
+   while (1) {
+      run();
+      await delay(8000);
+   }
+}
+
+run_anim();

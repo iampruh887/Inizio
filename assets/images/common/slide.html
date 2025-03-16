@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Image Slider</title>
+   <style>
+      * {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+      }
+
+      body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         background: #f4f4f4;
+      }
+
+      .slider-container {
+         position: relative;
+         width: 600px;
+         overflow: hidden;
+         border-radius: 10px;
+      }
+
+      .slides {
+         display: flex;
+         transition: transform 0.5s ease-in-out;
+      }
+
+      .slide {
+         min-width: 100%;
+      }
+
+      .slide img {
+         width: 100%;
+         height: 300px;
+         object-fit: cover;
+      }
+
+      .dots,
+      .slide-buttons {
+         display: flex;
+         justify-content: center;
+         margin-top: 10px;
+         gap: 5px;
+      }
+
+      .dot,
+      .slide-button {
+         padding: 10px;
+         border: none;
+         background: gray;
+         color: white;
+         cursor: pointer;
+         border-radius: 15px;
+      }
+
+      .dot.active,
+      .slide-button.active {
+         background: blue;
+      }
+
+      .buttons {
+         display: flex;
+         justify-content: space-between;
+         margin-top: 10px;
+      }
+
+      .buttons button {
+         padding: 10px 20px;
+         border: none;
+         background: blue;
+         color: white;
+         cursor: pointer;
+         border-radius: 5px;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="slider-container">
+      <div class="slides">
+         <div class="slide"><img src="assets/images/team/em-4.webp" alt="Slide 4"></div>
+         <div class="slide"><img src="assets/images/team/em-1.webp" alt="Slide 1"></div>
+         <div class="slide"><img src="assets/images/team/em-2.webp" alt="Slide 2"></div>
+         <div class="slide"><img src="assets/images/team/em-3.webp" alt="Slide 3"></div>
+         <div class="slide"><img src="assets/images/team/em-4.webp" alt="Slide 4"></div>
+         <div class="slide"><img src="assets/images/team/em-1.webp" alt="Slide 1"></div>
+      </div>
+
+      <div class="dots"></div>
+
+      <div class="slide-buttons"></div>
+
+      <div class="buttons">
+         <button id="prev">Previous</button>
+         <button id="next">Next</button>
+      </div>
+   </div>
+
+   <script>
+      const slides = document.querySelector(".slides");
+      const slideItems = document.querySelectorAll(".slide");
+      const dotsContainer = document.querySelector(".dots");
+      const buttonsContainer = document.querySelector(".slide-buttons");
+      const prevBtn = document.getElementById("prev");
+      const nextBtn = document.getElementById("next");
+      const totalSlides = slideItems.length - 2;
+      let currentIndex = 1;
+      let autoSlideInterval;
+
+      function startAutoSlide() {
+         clearInterval(autoSlideInterval);
+         autoSlideInterval = setInterval(nextSlide, 5000);
+      }
+
+      function updateSlider(instant = false) {
+         slides.style.transition = instant ? "none" : "transform 0.5s ease-in-out";
+         slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+         document.querySelectorAll(".dot").forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentIndex - 1);
+         });
+         document.querySelectorAll(".slide-button").forEach((button, index) => {
+            button.classList.toggle("active", index === currentIndex - 1);
+         });
+      }
+
+      function createControls() {
+         for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement("div");
+            dot.classList.add("dot");
+            dot.addEventListener("click", () => {
+               currentIndex = i + 1;
+               updateSlider();
+               startAutoSlide();
+            });
+            dotsContainer.appendChild(dot);
+
+            const button = document.createElement("button");
+            button.classList.add("slide-button");
+            button.textContent = `Slide ${i + 1}`;
+            button.addEventListener("click", () => {
+               currentIndex = i + 1;
+               updateSlider();
+               startAutoSlide();
+            });
+            buttonsContainer.appendChild(button);
+         }
+      }
+
+      function nextSlide() {
+         if (currentIndex >= totalSlides) {
+            currentIndex++;
+            updateSlider();
+            setTimeout(() => {
+               currentIndex = 1;
+               updateSlider(true);
+            }, 500);
+         } else {
+            currentIndex++;
+            updateSlider();
+         }
+      }
+
+      function prevSlide() {
+         if (currentIndex <= 1) {
+            currentIndex--;
+            updateSlider();
+            setTimeout(() => {
+               currentIndex = totalSlides;
+               updateSlider(true);
+            }, 500);
+         } else {
+            currentIndex--;
+            updateSlider();
+         }
+      }
+
+      prevBtn.addEventListener("click", () => {
+         prevSlide();
+         startAutoSlide();
+      });
+      nextBtn.addEventListener("click", () => {
+         nextSlide();
+         startAutoSlide();
+      });
+      createControls();
+      updateSlider(true);
+      startAutoSlide();
+   </script>
+</body>
+
+</html>
