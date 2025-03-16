@@ -683,6 +683,7 @@ body {
    width: 28%;
    padding: 20px 15px 20px 25px;
    margin: 0px 5.33% 0px 0px;
+   overflow: hidden;
 }
 
 .member>div {
