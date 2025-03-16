@@ -2625,6 +2625,12 @@ body {
    .slide-btn>button:hover {
       font-size: 1.35rem;
    }
+
+   .ban-box>div>p {
+      width: 100%;
+      margin: 0px;
+      padding: 10px 5vw;
+   }
 }
 
 /* Small Devices (Tablets, Large Phones) */
@@ -3044,6 +3050,12 @@ body {
    .slide-btn>button {
       font-size: 0.9rem;
       border-radius: 8px;
+      width: 23%;
+      height: 40px
+   }
+
+   .slide-btn>button:hover {
+      font-size: 0.98rem;
    }
 
 }
