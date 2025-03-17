@@ -4,12 +4,13 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>CONTACT US</title>
+   <title>CONTACT</title>
    <link rel="stylesheet" href="./assets/css/style.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
    <link rel="icon" href="assets/images/common/logo-white.svg" type="image/x-icon">
+
    <script src="assets/js/script.js" defer></script>
 
 </head>
@@ -100,112 +101,118 @@
 
 
    <main>
-      <section>
-         <div class="banner cont-ban">
-         </div>
-      </section>
+      <div class="page-banner">
 
-
-      <section>
-         <div class="overlay-box">
-            <div class="body-content">
-
-
-               <div class="contact-wrapper">
-
-                  <div class="contact-form-container">
-                     <h1 class="contact-title">Let's get in touch</h1>
-                     <div id="thank-you-message" class="thank-you-message">
-                        Thank you! Your message has been sent.
-                     </div>
-
-                     <form id="contact-form">
-                        <div class="input-group">
-                           <div class="form-input">
-                              <label for="name">Name</label>
-                              <input type="text" id="name" name="name" required>
-                           </div>
-
-                           <div class="form-input">
-                              <label for="email">Email Address</label>
-                              <input type="email" id="email" name="email" required>
-                           </div>
-
-                           <div class="form-input">
-                              <label for="phone">Phone <span class="optional">(Optional)</span></label>
-                              <input type="tel" id="phone" name="phone">
-                           </div>
-
-                           <div class="form-input">
-                              <label for="company">Company <span class="optional">(Optional)</span></label>
-                              <input type="text" id="company" name="company">
-                           </div>
-                        </div>
-
-                        <div class="message-group">
-                           <label for="message">Message</label>
-                           <textarea id="message" name="message" rows="4" required></textarea>
-                        </div>
-
-                        <button type="submit" class="send-message-btn">SEND MESSAGE</button>
-
-                     </form>
-                  </div>
-
-                  <div class="contact-info-container">
-                     <h2>Send A Message, We Will Get Back To You.</h2>
-
-                     <div class="contact-info">
-
-                        <div class="info-item">
-                           <span class="cont-icon">
-                              <i class="fa-solid fa-envelope"></i>
-                           </span>
-                           <a title="ecell@iiitg.ac.in" href="mailto:ecell@iiitg.ac.in">ecell@iiitg.ac.in
-                           </a>
-                        </div>
-                        <div class="info-item">
-                           <span class="cont-icon">
-                              <i class="fa-solid fa-envelope"></i>
-                           </span>
-                           <a title="ecell@iiitg.ac.in" href="mailto:ecell@iiitg.ac.in">ecell@iiitg.ac.in
-                           </a>
-                        </div>
-                        <div class="info-item">
-                           <span class="cont-icon">
-                              <i class="fa-solid fa-phone"></i>
-                           </span>
-                           <a title="+91-9530590415" href="tel:+919530590415">+91-953 059 0415
-                           </a>
-                        </div>
-                        <div class="info-item">
-                           <span class="cont-icon">
-                              <i class="fa-solid fa-phone"></i>
-                           </span>
-                           <a title="+91-8882896275" href="tel:+918882896275">+91 888 289 6275
-                           </a>
-                        </div>
-
-                     </div>
-
-                     <div class="address-section">
-                        <h3>Our Address</h3>
-                        <p>Bongora, Guwahati -781015</p>
-                        <p>Assam, INDIA</p>
-                        <p>Phone: 0361 2801084</p>
-                        <p>Email: registrar@iitg.ac.in</p>
-                     </div>
-                  </div>
-
-                  <!-- Hidden iframe to prevent redirection -->
-                  <iframe name="hidden_iframe" style="display: none;"></iframe>
-               </div>
-
+         <section>
+            <div class="banner no-bg cont-ban">
             </div>
-         </div>
-      </section>
-   </main>
+         </section>
 
+         <section>
+            <div class="overlay-box cont-overlay">
+               <div class="body-content">
+
+                  <div class="contact-box">
+                     <h1 class="contact-title">Let's get in touch</h1>
+                     <div class="contact-wrapper">
+
+                        <div class="contact-form-container">
+                           <div id="thank-you-message" class="thank-you-message no-disp">
+                              Thank you! Your message has been sent.
+                           </div>
+
+                           <form id="contact-form">
+                              <div class="input-group">
+                                 <div class="form-input">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" required>
+                                 </div>
+
+                                 <div class="form-input">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" required>
+                                 </div>
+
+                                 <div class="form-input">
+                                    <label for="phone">Phone <span class="optional">(Optional)</span></label>
+                                    <input type="tel" id="phone" name="phone">
+                                 </div>
+
+                                 <div class="form-input">
+                                    <label for="company">Company <span class="optional">(Optional)</span></label>
+                                    <input type="text" id="company" name="company">
+                                 </div>
+                              </div>
+
+                              <div class="message-group">
+                                 <label for="message">Message</label>
+                                 <textarea id="message" name="message" rows="4" required></textarea>
+                              </div>
+
+                              <button type="submit" class="send-message-btn">SEND MESSAGE</button>
+
+                           </form>
+                        </div>
+
+                        <div class="contact-info-container">
+
+                           <div class="info-cont">
+                              <div class="email-list">
+                                 <h2 class="cont-info-title">Send A Message, We Will Get Back To You.</h2>
+                                 <div class="contact-info">
+
+                                    <div class="info-item">
+                                       <span class="cont-icon">
+                                          <i class="fa-solid fa-envelope"></i>
+                                       </span>
+                                       <a title="ecell@iiitg.ac.in" href="mailto:ecell@iiitg.ac.in">ecell@iiitg.ac.in
+                                       </a>
+                                    </div>
+                                    <div class="info-item">
+                                       <span class="cont-icon">
+                                          <i class="fa-solid fa-phone"></i>
+                                       </span>
+                                       <a title="+91-9530590415" href="tel:+919530590415">+91-953 059 0415
+                                       </a>
+                                    </div>
+                                    <div class="info-item">
+                                       <span class="cont-icon">
+                                          <i class="fa-solid fa-phone"></i>
+                                       </span>
+                                       <a title="+91-8882896275" href="tel:+918882896275">+91 888 289 6275
+                                       </a>
+                                    </div>
+
+                                 </div>
+                              </div>
+
+                              <div class="add-data">
+                                 <h3 class="cont-info-title">Our Address</h3>
+                                 <div class="address-section">
+                                    <p>Bongora, Guwahati -781015<br>
+                                       Assam, INDIA<br>
+                                       Phone: 0361 2801084<br>
+                                       Email: registrar@iitg.ac.in</p>
+                                 </div>
+                              </div>
+                           </div>
+
+                        </div>
+
+                        <!-- Hidden iframe to prevent redirection -->
+                        <iframe title="Hidden Iframe" name="hidden_iframe" class="no-disp"></iframe>
+                     </div>
+                  </div>
+
+
+               </div>
+            </div>
+
+      </div>
+      </section>
+      </div>
+
+   </main>
 
    <footer>
       <div class="footer overlay-box">
@@ -233,15 +240,13 @@
                      <div class="icon">
                         <a id="insta"
                            href="https://www.instagram.com/inizio.iiitguwahati?utm_source=qr&igsh=MWhwaGM1dTVjazd6aA=="
-                           target="_blank" rel="noopener noreferrer" title="Follow us on Instagram"
-                           aria-label="Follow us on Instagram">
+                           target="_blank" rel="noopener noreferrer" title="Follow us on Instagram">
                            <i class="fa-brands fa-instagram"></i>
                         </a>
                      </div>
                      <div id="linkedin" class="icon">
                         <a href="https://www.linkedin.com/company/e-cell-iiit-guwahati/?originalSubdomain=in"
-                           target="_blank" rel="noopener noreferrer" title="Follow us on Instagram"
-                           aria-label="Follow us on  linkedin">
+                           target="_blank" rel="noopener noreferrer" title="Follow us on linkedin">
                            <i class="fa-brands fa-linkedin"></i>
                         </a>
                      </div>

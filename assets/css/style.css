@@ -1524,6 +1524,7 @@ body {
    width: 94vw;
    margin: 0 auto;
    border-radius: 25px;
+   margin-bottom: -20px;
 }
 
 .contact-box {
@@ -3286,7 +3287,12 @@ textarea {
       font-size: 0.98rem;
    }
 
-   .contact-title{
+
+   .cont-overlay {
+      margin-bottom: -50px;
+   }
+
+   .contact-title {
       font-size: 2rem;
    }
 
