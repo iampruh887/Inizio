@@ -374,7 +374,7 @@ body {
    background-color: #ff6b00;
    background-image: url('../images/common/bg.svg');
    background-size: contain;
-   width: 100vw;
+   width: 100%;
    padding-bottom: 100px;
 }
 
@@ -650,11 +650,12 @@ body {
 }
 
 .team-box {
-   margin: 10px 0px 0px 8vw;
+   margin: 10px 0px 0px 7.8vw;
 }
 
 .team-des {
    font-size: 0.95rem;
+   padding-left: 20px;
 }
 
 .team-list {
@@ -666,7 +667,7 @@ body {
 
 .member {
    width: 28%;
-   padding: 20px 15px 20px 25px;
+   padding: 20px 15px 20px 40px;
    margin: 0px 5.33% 0px 0px;
    overflow: hidden;
 }
@@ -1513,6 +1514,160 @@ body {
 
 
 
+/* CONTACTS PAGE START HERE */
+
+.cont-ban {
+   height: 150px;
+}
+
+.cont-overlay {
+   width: 94vw;
+   margin: 0 auto;
+   border-radius: 25px;
+}
+
+.contact-box {
+   padding: 20px 6vw 0px;
+   margin-bottom: -20px;
+}
+
+.contact-title {
+   font-size: 3rem;
+   font-weight: 800;
+   font-family: lexend, sans-serif, Arial;
+   margin-bottom: 15px;
+   color: #000;
+}
+
+.contact-wrapper {
+   display: flex;
+   width: 100%;
+}
+
+.contact-form-container {
+   flex: 1;
+   padding: 40px 40px 0px 0px;
+   border-right: 2px solid #bbbbbb;
+}
+
+.no-disp {
+   display: none;
+}
+
+
+.input-group {
+   display: flex;
+   flex-wrap: wrap;
+   margin-bottom: 15px;
+   justify-content: space-between;
+}
+
+.form-input {
+   width: 48%;
+   margin-bottom: 25px;
+}
+
+.message-group {
+   flex: 1;
+   margin-bottom: 20px;
+}
+
+label {
+   font-family: Roboto, sans-serif, Arial;
+   font-size: 1.1rem;
+   display: block;
+   margin-bottom: 8px;
+   font-weight: 400;
+}
+
+.optional {
+   font-weight: 300;
+}
+
+input,
+textarea {
+   width: 100%;
+   padding: 20px 10px;
+   font-size: 1rem;
+   border: 1px solid #ccc;
+   border-radius: 0;
+   background-color: #fff;
+   box-sizing: border-box;
+}
+
+textarea {
+   resize: vertical;
+}
+
+.send-message-btn {
+   background-color: transparent;
+   color: #000;
+   border: 1px solid #000;
+   padding: 15px 40px;
+   font-size: 1.2rem;
+   cursor: pointer;
+   font-weight: 400;
+   transition: all 0.3s;
+}
+
+.send-message-btn:hover {
+   background-color: #232323;
+   color: #fff;
+}
+
+
+.contact-info-container {
+   flex: 1;
+   padding-left: 40px;
+}
+
+.cont-info-title {
+   font-family: Roboto, sans-serif, Arial;
+   font-weight: 600;
+   font-size: 1.4rem;
+   margin-bottom: 30px;
+}
+
+.contact-info {
+   display: flex;
+   flex-wrap: wrap;
+   margin-bottom: 50px;
+}
+
+.info-item {
+   display: flex;
+   font-size: 1.2rem;
+   flex: 1;
+   margin-bottom: 20px;
+}
+
+.info-item>a {
+   font-family: Roboto, sans-serif, Arial;
+   font-weight: 300;
+   color: #000;
+   white-space: nowrap;
+}
+
+.cont-icon {
+   margin-right: 10px;
+   font-size: 1.2rem;
+   color: #585858;
+}
+
+.address-section p {
+   font-family: Roboto, sans-serif, Arial;
+   font-size: 1.2rem;
+   font-weight: 300;
+   color: #000;
+   line-height: 2;
+}
+
+.thank-you-message {
+   font-size: 18px;
+   margin-top: 20px;
+}
+
+/* CONTACTS PAGE ENDS HERE */
 /* Body Ends */
 
 
@@ -1829,7 +1984,7 @@ body {
 
    .member {
       width: 30%;
-      padding: 20px 15px 20px 25px;
+      padding: 20px 15px 20px 40px;
       margin: 0px 3.33% 0px 0px;
    }
 
@@ -2211,7 +2366,7 @@ body {
 
    .member {
       width: 44%;
-      padding: 20px 15px 20px 25px;
+      padding: 20px 15px 20px 40px;
       margin: 0px 6% 0px 0px;
    }
 
@@ -2576,7 +2731,7 @@ body {
 
    .member {
       width: 44%;
-      padding: 15px 15px 15px 25px;
+      padding: 15px 15px 15px 40px;
       margin: 0px 6% 0px 0px;
    }
 
@@ -3013,8 +3168,9 @@ body {
 
    .member {
       width: 90%;
-      padding: 15px 15px 15px 30px;
+      padding: 15px 15px 15px 40px;
       margin: 0px 10% 0px 0px;
+      overflow: hidden;
    }
 
    .mem-data>div {
