@@ -191,7 +191,7 @@ body {
    right: 0px;
    background-color: rgba(0, 0, 0, 0.75);
    right: -100vw;
-   transition: all 0s ease;
+   transition: none;
 }
 
 .dim-show {
@@ -2424,9 +2424,9 @@ textarea {
 
 
 
-.contact-box{
-   
-}
+   .contact-box {
+      margin-bottom: -40px;
+   }
 
 
    .contact-form-container {
@@ -2443,6 +2443,7 @@ textarea {
 
    .info-cont {
       display: flex;
+      flex-wrap: wrap;
    }
 
    .contact-info {
@@ -2830,6 +2831,33 @@ textarea {
       margin: 0px;
       padding: 10px 5vw;
    }
+
+   input, textarea {
+      padding: 10px;
+   }
+
+   .contact-title {
+      font-size: 2.4rem;
+   }
+
+   .send-message-btn {
+      padding: 10px 20px;
+      margin-top: 10px;
+   }
+
+   .email-list, .add-data {
+      flex: auto;
+      width: 100%;
+      padding: 10px 0px;
+   }
+
+
+
+   .address-section>p, .info-item {
+      font-size: 1.1rem;
+   }
+
+
 }
 
 /* Small Devices (Tablets, Large Phones) */
@@ -3256,6 +3284,14 @@ textarea {
 
    .slide-btn>button:hover {
       font-size: 0.98rem;
+   }
+
+   .contact-title{
+      font-size: 2rem;
+   }
+
+   .form-input {
+      width: 100%;
    }
 
 }
