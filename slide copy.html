@@ -4,22 +4,11 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="assets/css/style.css">
    <title>Event Slider</title>
    <style>
-      * {
-         box-sizing: border-box;
-         margin: 0;
-         padding: 0;
-         font-family: Arial, sans-serif;
-      }
-
       body {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         height: 100vh;
-         background: #fdf1c5;
-         flex-direction: column;
+         background-color: blanchedalmond;
       }
 
       .event-contain {
@@ -35,13 +24,13 @@
       }
 
       /* Event Description */
-      .event-description {
+      .event-left {
          width: 40%;
          padding: 20px;
          height: 100%;
-         background: #333;
+         background-color: rgb(0, 0, 0, 0.7);
          color: white;
-         border-radius: 10px;
+         border-radius: 25px;
          font-size: 16px;
       }
 
@@ -50,11 +39,10 @@
          position: relative;
          width: 60%;
          height: 80vh;
+         border-radius: 25px;
+         margin: 0px 15px;
          overflow: hidden;
-         border-radius: 10px;
-         /* aspect-ratio: 16 / 9; */
-         /* Fixed aspect ratio */
-         background: #ddd;
+         flex-shrink: 0;
       }
 
       .slides {
@@ -63,12 +51,12 @@
          transition: transform 0.5s ease-in-out;
       }
 
-      .slide {
+      .ev-slide {
          min-width: 100%;
          height: 100%;
       }
 
-      .slide img {
+      .ev-slide img {
          width: 100%;
          height: 100%;
          object-fit: cover;
@@ -76,49 +64,61 @@
 
       /* Rectangular Dots - Now over the slider */
       .dots {
+         width: 100%;
+         padding: 0px 40px;
          position: absolute;
-         bottom: 10px;
+         bottom: 40px;
          left: 50%;
          transform: translateX(-50%);
          display: flex;
-         gap: 5px;
+         gap: 20px;
       }
 
       .dot {
-         width: 50px;
-         height: 4px;
-         background: gray;
-         opacity: 0.5;
+         width: 100%;
+         height: 8px;
+         background: #fff5cf;
+         border-radius: 5px;
          transition: 0.3s;
          cursor: pointer;
       }
 
       .dot.active {
          opacity: 1;
-         background: black;
+         background: #ff6b00;
       }
 
       /* Buttons */
       .buttons {
          display: flex;
-         background-color: red;
+         justify-content: space-around;
          width: 100%;
-         justify-content: center;
          gap: 10px;
          margin-top: 15px;
       }
 
       .slide-button {
-         padding: 10px;
          border: 2px solid black;
-         background: none;
          cursor: pointer;
-         border-radius: 5px;
+         background-color: #fff5cf;
+         color: #000000;
+         font-family: roboto, sans-serif, Arial;
+         font-weight: 400;
+         text-transform: lowercase;
+         font-size: 1.5rem;
+         width: 30%;
+         height: 6vw;
+         border-radius: 20px;
+         transition: all 0.2s ease-in-out;
       }
 
       .slide-button.active {
          background: black;
          color: white;
+      }
+
+      .slide-button:hover {
+         font-size: 1.7rem;
       }
    </style>
 </head>
@@ -129,16 +129,36 @@
    <div class="event-contain">
       <div class="container">
          <!-- Event Description -->
-         <div class="event-description" id="eventText">Event 1: Welcome to Alpha</div>
+
+         <div class="event-left">
+            <div class="event-data">
+               <div class="event-para">
+                  <div class="event-description" id="eventText">
+                     Event calender and discription
+                  </div>
+               </div>
+               <div class="event-detail">
+                  <a href="#" title="event 1">
+                     <span class="event-name">@event1 </span>
+                     <span class="arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                     </span>
+                  </a>
+                  <span class="event-num">#001</span>
+               </div>
+
+            </div>
+
+         </div>
 
          <!-- Image Slider -->
          <div class="slider-container">
             <div class="slides">
-               <div class="slide"><img src="assets/images/team/em-3.webp" alt="Event 3"></div>
-               <div class="slide"><img src="assets/images/team/em-1.webp" alt="Event 1"></div>
-               <div class="slide"><img src="assets/images/team/em-2.webp" alt="Event 2"></div>
-               <div class="slide"><img src="assets/images/team/em-3.webp" alt="Event 3"></div>
-               <div class="slide"><img src="assets/images/team/em-1.webp" alt="Event 1"></div>
+               <div class="ev-slide"><img src="assets/images/team/em (1).webp" alt="Event 3"></div>
+               <div class="ev-slide"><img src="assets/images/team/em (2).webp" alt="Event 1"></div>
+               <div class="ev-slide"><img src="assets/images/team/em (3).webp" alt="Event 2"></div>
+               <div class="ev-slide"><img src="assets/images/team/em (4).webp" alt="Event 3"></div>
+               <div class="ev-slide"><img src="assets/images/team/em (1).webp" alt="Event 1"></div>
             </div>
             <div class="dots"></div>
          </div>
@@ -161,9 +181,9 @@
 
       // Event Names & Descriptions
       const slideData = [
-         { name: "Opening Ceremony", text: "Event 1: Welcome to Alpha perspiciatis? Repudiandae corporis sint illum fuga illo dolore aliquidEvent 1: Welcome to Alpha perspiciatis? Repudiandae corporis sint illum fuga illo dolore aliquidEvent 1: Welcome to Alpha perspiciatis? Repudiandae corporis sint illum fuga illo dolore aliquidEvent 1: Welcome to Alpha perspiciatis? Repudiandae corporis sint illum fuga illo dolore aliquidEvent 1: Welcome to Alpha perspiciatis? Repudiandae corporis sint illum fuga illo dolore aliquidEvent 1: Welcome to Alpha perspiciatis? Repudiandae corporis sint illum fuga illo dolore aliquidEvent 1: Welcome to Alpha perspiciatis? Repudiandae corporis sint illum fuga illo dolore aliquidEvent 1: Welcome to Alpha perspiciatis? Repudiandae corporis sint illum fuga illo dolore aliquidEvent 1: Welcome to Alpha perspiciatis? Repudiandae corporis sint illum fuga illo dolore aliquidEvent 1: Welcome to Alpha p" },
-         { name: "Tech Conference", text: "Event 2: The Future of AI " },
-         { name: "Closing Gala", text: "Event 3: Celebrating Success" }
+         { name: "Opening Ceremony", text: "Gear up for an electrifying event at IIIT\'s fest! Teams of 4 will battle in two rounds: a quiz to secure a franchise spot, followed by a high-stakes player auction. With 100 crores, build your dream team of 12 players while balancing Indian and overseas stars. Master the bidding war, strategize your picks, and aim for the highest team rating to win. Will you outsmart the competition? Join the thrill and showcase your cricketing genius!" },
+         { name: "Tech Conference", text: "Unleash your creativity in this week-long Instagram marketing showdown! Teams of 4-5 will craft and run a dynamic campaign for a given product, posting daily content, reels, and stories to maximize engagement. After 6 days of strategizing and engaging, teams will pitch their campaign results to a panel of judges. Showcase your skills in analytics, content creation, and storytelling to win exciting rewards!Join the challenge and prove your marketing prowess!" },
+         { name: "Closing Gala", text: "Gear up for an electrifying event at IIIT\'s fest! Teams of 4 will battle in two rounds: a quiz to secure a franchise spot, followed by a high-stakes player auction. With 100 crores, build your dream team of 12 players while balancing Indian and overseas stars. Master the bidding war, strategize your picks, and aim for the highest team rating to win. Will you outsmart the competition? Join the thrill and showcase your cricketing genius!" }
       ];
 
       function startAutoSlide() {

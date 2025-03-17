@@ -1437,6 +1437,117 @@ body {
    margin-left: 8px;
 }
 
+.event-contain {
+   padding: 40px 8vw 0px;
+}
+
+/* Main Container */
+.container {
+   height: 80vh;
+   display: flex;
+   gap: 20px;
+   align-items: center;
+}
+
+/* Event Description */
+.event-left {
+   width: 40%;
+   padding: 20px;
+   height: 100%;
+   background-color: rgb(0, 0, 0, 0.7);
+   color: white;
+   border-radius: 25px;
+   font-size: 16px;
+}
+
+/* Slider */
+.slider-container {
+   position: relative;
+   width: 60%;
+   height: 80vh;
+   border-radius: 25px;
+   margin: 0px 15px;
+   overflow: hidden;
+   flex-shrink: 0;
+}
+
+.slides {
+   display: flex;
+   height: 100%;
+   transition: transform 0.5s ease-in-out;
+}
+
+.ev-slide {
+   min-width: 100%;
+   height: 100%;
+}
+
+.ev-slide img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+/* Rectangular Dots - Now over the slider */
+.dots {
+   width: 100%;
+   padding: 0px 40px;
+   position: absolute;
+   bottom: 40px;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   gap: 20px;
+}
+
+.dot {
+   width: 100%;
+   height: 8px;
+   background: #fff;
+   border-radius: 5px;
+   transition: 0.3s;
+   cursor: pointer;
+}
+
+.dot.active {
+   opacity: 1;
+   background: #ff6b00;
+}
+
+/* Buttons */
+.buttons {
+   display: flex;
+   justify-content: space-around;
+   width: 100%;
+   gap: 10px;
+   margin-top: 40px;
+}
+
+.slide-button {
+   border: 2px solid black;
+   cursor: pointer;
+   background-color: #fff5cf;
+   color: #000000;
+   font-family: roboto, sans-serif, Arial;
+   font-weight: 400;
+   text-transform: lowercase;
+   font-size: 1.5rem;
+   width: 30%;
+   height: 6vw;
+   border-radius: 20px;
+   transition: all 0.2s ease-in-out;
+}
+
+.slide-button.active {
+   background: black;
+   color: white;
+}
+
+.slide-button:hover {
+   font-size: 1.7rem;
+}
+
+/* 
 .event-poster-box {
    width: 60%;
    background-color: #f5852933;
@@ -1454,7 +1565,6 @@ body {
    position: relative;
    left: 0px;
    width: 500%;
-   /* animation: 8s box2 infinite; */
 }
 
 .ev-slide {
@@ -1468,7 +1578,7 @@ body {
    width: 100%;
    object-fit: cover;
    object-position: 50% 30%;
-}
+} */
 
 /* 
 
