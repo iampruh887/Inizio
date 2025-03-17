@@ -1078,6 +1078,12 @@ body {
    width: 100%;
 }
 
+.single-merch {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
 .merch {
    background-color: #ff6b00;
    border-radius: 15px;
@@ -1448,7 +1454,7 @@ body {
    position: relative;
    left: 0px;
    width: 500%;
-   animation: 8s box2 infinite;
+   /* animation: 8s box2 infinite; */
 }
 
 .ev-slide {
@@ -1464,6 +1470,7 @@ body {
    object-position: 50% 30%;
 }
 
+/* 
 
 @keyframes box2 {
 
@@ -1486,7 +1493,7 @@ body {
    100% {
       left: -200%;
    }
-}
+} */
 
 .slide-btn {
    padding: 0px 80px;

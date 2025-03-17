@@ -95,32 +95,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-let hash = document.querySelector(".event-num");
-let p = document.querySelector(".ev-bio");
-let events = document.querySelector(".event-name");
-function delay(ms) {
-   return new Promise(resolve => setTimeout(resolve, ms));
-}
-async function run() {
-   hash.innerHTML = `#001`;
-   p.innerHTML = 'Gear up for an electrifying event at IIIT\'s fest! Teams of 4 will battle in two rounds: a quiz to secure a franchise spot, followed by a high-stakes player auction. With 100 crores, build your dream team of 12 players while balancing Indian and overseas stars. Master the bidding war, strategize your picks, and aim for the highest team rating to win. Will you outsmart the competition? Join the thrill and showcase your cricketing genius!';
-   events.innerHTML = '@IPL Auction 2.O';
-   await delay(4000);
+// let hash = document.querySelector(".event-num");
+// let p = document.querySelector(".ev-bio");
+// let events = document.querySelector(".event-name");
+// function delay(ms) {
+//    return new Promise(resolve => setTimeout(resolve, ms));
+// }
+// async function run() {
+//    hash.innerHTML = `#001`;
+//    p.innerHTML = 'Gear up for an electrifying event at IIIT\'s fest! Teams of 4 will battle in two rounds: a quiz to secure a franchise spot, followed by a high-stakes player auction. With 100 crores, build your dream team of 12 players while balancing Indian and overseas stars. Master the bidding war, strategize your picks, and aim for the highest team rating to win. Will you outsmart the competition? Join the thrill and showcase your cricketing genius!';
+//    events.innerHTML = '@IPL Auction 2.O';
+//    await delay(4000);
 
-   hash.innerHTML = `#002`;
-   p.innerHTML = "Unleash your creativity in this week-long Instagram marketing showdown! Teams of 4-5 will craft and run a dynamic campaign for a given product, posting daily content, reels, and stories to maximize engagement. After 6 days of strategizing and engaging, teams will pitch their campaign results to a panel of judges. Showcase your skills in analytics, content creation, and storytelling to win exciting rewards!Join the challenge and prove your marketing prowess!";
-   events.innerHTML = '@Digital Challenge';
-   await delay(4000);
-}
+//    hash.innerHTML = `#002`;
+//    p.innerHTML = "Unleash your creativity in this week-long Instagram marketing showdown! Teams of 4-5 will craft and run a dynamic campaign for a given product, posting daily content, reels, and stories to maximize engagement. After 6 days of strategizing and engaging, teams will pitch their campaign results to a panel of judges. Showcase your skills in analytics, content creation, and storytelling to win exciting rewards!Join the challenge and prove your marketing prowess!";
+//    events.innerHTML = '@Digital Challenge';
+//    await delay(4000);
+// }
 
-async function run_anim() {
-   while (1) {
-      run();
-      await delay(8000);
-   }
-}
+// async function run_anim() {
+//    while (1) {
+//       run();
+//       await delay(8000);
+//    }
+// }
 
-run_anim();
+// run_anim();
 
 
 
@@ -178,3 +178,76 @@ document.addEventListener('DOMContentLoaded', function () {
       thankYouMessage.style.display = 'block';
    });
 });
+
+
+
+// Event Slider New
+
+const slides = document.querySelector(".slides");
+const dotsContainer = document.querySelector(".dots");
+const buttonsContainer = document.querySelector(".buttons");
+const totalSlides = document.querySelectorAll(".slide").length - 2;
+let currentIndex = 1;
+let autoSlideInterval;
+
+// Custom names for buttons
+const slideNames = ["Alpha", "Bravo", "Charlie"]; // Change these to your custom names
+
+function startAutoSlide() {
+   clearInterval(autoSlideInterval);
+   autoSlideInterval = setInterval(nextSlide, 1000);
+}
+
+function updateSlider(instant = false) {
+   slides.style.transition = instant ? "none" : "transform 0.5s ease-in-out";
+   slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+   document.querySelectorAll(".dot").forEach((dot, index) => {
+      dot.classList.toggle("active", index === currentIndex - 1);
+   });
+
+   document.querySelectorAll(".slide-button").forEach((button, index) => {
+      button.classList.toggle("active", index === currentIndex - 1);
+   });
+}
+
+function createControls() {
+   for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement("div");
+      dot.classList.add("dot");
+      dot.addEventListener("click", () => {
+         currentIndex = i + 1;
+         updateSlider();
+         startAutoSlide();
+      });
+      dotsContainer.appendChild(dot);
+
+      const button = document.createElement("button");
+      button.classList.add("slide-button");
+      button.textContent = slideNames[i] || `Slide ${i + 1}`; // Use custom name or fallback to default
+      button.addEventListener("click", () => {
+         currentIndex = i + 1;
+         updateSlider();
+         startAutoSlide();
+      });
+      buttonsContainer.appendChild(button);
+   }
+}
+
+function nextSlide() {
+   if (currentIndex >= totalSlides) {
+      currentIndex++;
+      updateSlider();
+      setTimeout(() => {
+         currentIndex = 1;
+         updateSlider(true);
+      }, 500);
+   } else {
+      currentIndex++;
+      updateSlider();
+   }
+}
+
+createControls();
+updateSlider(true);
+startAutoSlide();

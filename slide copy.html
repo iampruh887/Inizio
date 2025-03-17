@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Event Slider</title>
+   <style>
+      * {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+         font-family: Arial, sans-serif;
+      }
+
+      body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         background: #fdf1c5;
+         flex-direction: column;
+      }
+
+      .event-contain {
+         padding: 8vw;
+      }
+
+      /* Main Container */
+      .container {
+         height: 80vh;
+         display: flex;
+         gap: 20px;
+         align-items: center;
+      }
+
+      /* Event Description */
+      .event-description {
+         width: 40%;
+         padding: 20px;
+         height: 100%;
+         background: #333;
+         color: white;
+         border-radius: 10px;
+         font-size: 16px;
+      }
+
+      /* Slider */
+      .slider-container {
+         position: relative;
+         width: 60%;
+         height: 80vh;
+         overflow: hidden;
+         border-radius: 10px;
+         /* aspect-ratio: 16 / 9; */
+         /* Fixed aspect ratio */
+         background: #ddd;
+      }
+
+      .slides {
+         display: flex;
+         height: 100%;
+         transition: transform 0.5s ease-in-out;
+      }
+
+      .slide {
+         min-width: 100%;
+         height: 100%;
+      }
+
+      .slide img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+
+      /* Rectangular Dots - Now over the slider */
+      .dots {
+         position: absolute;
+         bottom: 10px;
+         left: 50%;
+         transform: translateX(-50%);
+         display: flex;
+         gap: 5px;
+      }
+
+      .dot {
+         width: 50px;
+         height: 4px;
+         background: gray;
+         opacity: 0.5;
+         transition: 0.3s;
+         cursor: pointer;
+      }
+
+      .dot.active {
+         opacity: 1;
+         background: black;
+      }
+
+      /* Buttons */
+      .buttons {
+         display: flex;
+         background-color: red;
+         width: 100%;
+         justify-content: center;
+         gap: 10px;
+         margin-top: 15px;
+      }
+
+      .slide-button {
+         padding: 10px;
+         border: 2px solid black;
+         background: none;
+         cursor: pointer;
+         border-radius: 5px;
+      }
+
+      .slide-button.active {
+         background: black;
+         color: white;
+      }
+   </style>
+</head>
+
+<body>
+
+
+   <div class="event-contain">
+      <div class="container">
+         <!-- Event Description -->
+         <div class="event-description" id="eventText">Event 1: Welcome to Alpha</div>
+
+         <!-- Image Slider -->
+         <div class="slider-container">
+            <div class="slides">
+               <div class="slide"><img src="assets/images/team/em-3.webp" alt="Event 3"></div>
+               <div class="slide"><img src="assets/images/team/em-1.webp" alt="Event 1"></div>
+               <div class="slide"><img src="assets/images/team/em-2.webp" alt="Event 2"></div>
+               <div class="slide"><img src="assets/images/team/em-3.webp" alt="Event 3"></div>
+               <div class="slide"><img src="assets/images/team/em-1.webp" alt="Event 1"></div>
+            </div>
+            <div class="dots"></div>
+         </div>
+      </div>
+      <!-- Navigation Buttons -->
+      <div class="buttons"></div>
+   </div>
+
+   <!-- Main Container -->
+
+
+   <script>
+      const slides = document.querySelector(".slides");
+      const dotsContainer = document.querySelector(".dots");
+      const buttonsContainer = document.querySelector(".buttons");
+      const eventText = document.getElementById("eventText");
+      const totalSlides = 3; // Number of unique slides
+      let currentIndex = 1;
+      let autoSlideInterval;
+
+      // Event Names & Descriptions
+      const slideData = [
+         { name: "Opening Ceremony", text: "Event 1: Welcome to Alpha perspiciatis? Repudiandae corporis sint illum fuga illo dolore aliquidEvent 1: Welcome to Alpha perspiciatis? Repudiandae corporis sint illum fuga illo dolore aliquidEvent 1: Welcome to Alpha perspiciatis? Repudiandae corporis sint illum fuga illo dolore aliquidEvent 1: Welcome to Alpha perspiciatis? Repudiandae corporis sint illum fuga illo dolore aliquidEvent 1: Welcome to Alpha perspiciatis? Repudiandae corporis sint illum fuga illo dolore aliquidEvent 1: Welcome to Alpha perspiciatis? Repudiandae corporis sint illum fuga illo dolore aliquidEvent 1: Welcome to Alpha perspiciatis? Repudiandae corporis sint illum fuga illo dolore aliquidEvent 1: Welcome to Alpha perspiciatis? Repudiandae corporis sint illum fuga illo dolore aliquidEvent 1: Welcome to Alpha perspiciatis? Repudiandae corporis sint illum fuga illo dolore aliquidEvent 1: Welcome to Alpha p" },
+         { name: "Tech Conference", text: "Event 2: The Future of AI " },
+         { name: "Closing Gala", text: "Event 3: Celebrating Success" }
+      ];
+
+      function startAutoSlide() {
+         clearInterval(autoSlideInterval);
+         autoSlideInterval = setInterval(nextSlide, 5000);
+      }
+
+      function updateSlider(instant = false) {
+         slides.style.transition = instant ? "none" : "transform 0.5s ease-in-out";
+         slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+         document.querySelectorAll(".dot").forEach((dot, index) => {
+            dot.classList.toggle("active", index === (currentIndex - 1) % totalSlides);
+         });
+
+         document.querySelectorAll(".slide-button").forEach((button, index) => {
+            button.classList.toggle("active", index === (currentIndex - 1) % totalSlides);
+         });
+
+         // Update Event Description
+         eventText.textContent = slideData[(currentIndex - 1) % totalSlides].text;
+      }
+
+      function createControls() {
+         for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement("div");
+            dot.classList.add("dot");
+            dot.addEventListener("click", () => {
+               currentIndex = i + 1;
+               updateSlider();
+               startAutoSlide();
+            });
+            dotsContainer.appendChild(dot);
+
+            const button = document.createElement("button");
+            button.classList.add("slide-button");
+            button.textContent = slideData[i].name;
+            button.addEventListener("click", () => {
+               currentIndex = i + 1;
+               updateSlider();
+               startAutoSlide();
+            });
+            buttonsContainer.appendChild(button);
+         }
+      }
+
+      function nextSlide() {
+         if (currentIndex >= totalSlides) {
+            currentIndex++;
+            updateSlider();
+            setTimeout(() => {
+               currentIndex = 1;
+               updateSlider(true);
+            }, 500);
+         } else {
+            currentIndex++;
+            updateSlider();
+         }
+      }
+
+      createControls();
+      updateSlider(true);
+      startAutoSlide();
+   </script>
+
+</body>
+
+</html>
