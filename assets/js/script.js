@@ -254,3 +254,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+document.addEventListener("DOMContentLoaded", function () {
+   const sliders = document.querySelectorAll(".slider");
+
+   sliders.forEach(slider => {
+       let slides = Array.from(slider.children);
+       let totalSlides = slides.length;
+
+       // Clone slides to create the infinite loop effect
+       slides.forEach(slide => {
+           let clone = slide.cloneNode(true);
+           slider.appendChild(clone);
+       });
+
+       let scrollAmount = 0;
+       const speed = 2; // Adjust speed for smoother movement
+
+       function moveSlider() {
+           scrollAmount += speed;
+           if (scrollAmount >= slider.scrollWidth / totalSlides) {
+               scrollAmount = 0; // Reset to maintain seamless effect
+           }
+           slider.style.transform = `translateX(-${scrollAmount}px)`;
+       }
+
+       setInterval(moveSlider, 30); // Controls animation speed
+   });
+});
+
+
