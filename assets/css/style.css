@@ -1048,6 +1048,15 @@ body {
    overflow: hidden;
 }
 
+.landing-ev-img {
+   max-width: 100%;
+   max-height: 100%;
+   width: 100%;
+   height: 100%;
+   display: block;
+   object-fit: cover;
+}
+
 .event-tag {
    position: absolute;
    bottom: 25px;
@@ -1081,6 +1090,7 @@ body {
 }
 
 .single-merch {
+   margin: -80px 0px -50px;
    width: 100%;
    display: flex;
    justify-content: center;
@@ -1092,7 +1102,7 @@ body {
    display: flex;
    flex-direction: column;
    justify-content: center;
-   height: 700px;
+   height: auto;
    width: 40%;
    margin: 60px 0px 100px;
 }
@@ -1106,11 +1116,99 @@ body {
 }
 
 .merch-img {
-   background-color: #131313;
+   height: auto;
+   border-radius: 15px;
+   position: relative;
+   perspective: 1000px;
+   cursor: pointer;
+   overflow: hidden;
+}
+
+.mer-img {
+   max-width: 100%;
+   max-height: 100%;
+   width: 100%;
+   aspect-ratio: 1/2;
+   display: block;
+   object-fit: cover;
+}
+
+/* Add these styles to your existing style.css file */
+
+/* Card flip container */
+.merch-card {
+   position: relative;
+   width: 100%;
+   height: 28vw;
+   transition: transform 0.6s;
+   transform-style: preserve-3d;
+}
+
+.merch-card.flipped {
+   transform: rotateY(180deg);
+}
+
+/* Position the front and back sides */
+.merch-front, .merch-back {
+   position: absolute;
+   width: 100%;
    height: 100%;
-   margin-bottom: 25px;
+   backface-visibility: hidden;
+   object-fit: cover;
+   object-position: 50% 60%;
+   background-position: center;
    border-radius: 15px;
 }
+
+/* Style the back side */
+.merch-back {
+   transform: rotateY(180deg);
+}
+
+/* Style for the flip button */
+.flip-btn {
+   position: absolute;
+   bottom: 10px;
+   right: 10px;
+   background-color: rgba(0, 0, 0, 0.7);
+   color: white;
+   border: none;
+   padding: 5px 10px;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 0.8rem;
+   transition: background-color 0.3s;
+   z-index: 2;
+}
+
+.flip-btn:hover {
+   background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Style for the magnify button */
+.magnify-btn {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   background-color: rgba(0, 0, 0, 0.7);
+   color: white;
+   border: none;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   font-size: 1rem;
+   transition: background-color 0.3s;
+   z-index: 2;
+}
+
+.magnify-btn:hover {
+   background-color: rgba(0, 0, 0, 0.9);
+}
+
 
 .merch-data {
    padding: 20px;
@@ -1357,23 +1455,7 @@ body {
 }
 
 
-/* EVENTS PAGE CODE HERE */
-
-/* .events-cont {
-   display: flex;
-   width: 100%;
-   height: 80vh;
-   padding: 0px 50px;
-   margin: 50px 0px;
-} */
-/* 
-.event-data-box {
-   width: 40%;
-   border-radius: 25px;
-   background-color: rgb(0, 0, 0, 0.7);
-   padding: 30px 20px 25px;
-   margin: 0PX 15px;
-} */
+/* EVENTS PAGE STARTS HERE */
 
 .event-contain {
    padding: 40px 7vw 0px;
@@ -1386,7 +1468,6 @@ body {
    align-items: center;
 }
 
-/* Event Description */
 .event-left {
    width: 40%;
    padding: 20px;
@@ -1459,7 +1540,6 @@ body {
    margin-left: 8px;
 }
 
-/* Slider */
 .slider-container {
    position: relative;
    width: 60%;
@@ -1486,12 +1566,16 @@ body {
    object-fit: cover;
 }
 
-.slide-tint {
+.slide-tint, .home-ev-tint {
    width: 100%;
    height: 100%;
    position: absolute;
-   background: linear-gradient(0deg, #000000cc, #00000000, #00000000);
+   background: linear-gradient(0deg, #000000c4 10%, #00000000, #00000000);
    top: 0;
+}
+
+.home-ev-tint {
+   background: Linear-gradient(0deg, #000000b1 5%, #00000000, #00000000);
 }
 
 .dots {
@@ -1552,64 +1636,8 @@ body {
    font-size: 1.7rem;
 }
 
+/* EVENTS PAGE ENDS HERE */
 
-/* 
-.event-poster-box {
-   width: 60%;
-   background-color: #f5852933;
-   border-radius: 25px;
-   margin: 0PX 15px;
-   overflow: hidden;
-   flex-shrink: 0;
-}
-
-.event-slider {
-   display: flex;
-   height: 100%;
-   width: 200%;
-   overflow: hidden;
-   position: relative;
-   left: 0px;
-   width: 500%;
-}
-
-.ev-slide {
-   height: 100%;
-   width: 100%;
-   width: 20%;
-}
-
-.ev-slide>img {
-   height: 100%;
-   width: 100%;
-   object-fit: cover;
-   object-position: 50% 30%;
-} */
-
-/* 
-
-@keyframes box2 {
-
-   0% {
-      left: 0;
-   }
-
-   30% {
-      left: -100%;
-   }
-
-   50% {
-      left: -100%;
-   }
-
-   80% {
-      left: -200%;
-   }
-
-   100% {
-      left: -200%;
-   }
-} */
 
 /* CONTACTS PAGE START HERE */
 
@@ -1769,7 +1797,9 @@ textarea {
 /* CONTACTS PAGE ENDS HERE */
 /* Body Ends */
 
-/* Footer Starts */
+
+
+/* FOOTER STARTS */
 .footer {
    bottom: 50px;
    background-color: #131313;
@@ -2257,10 +2287,17 @@ textarea {
       padding: 0px 10px 40px;
    }
 
+   .merch-card{
+      height: 35vw;
+   }
+
    .merch {
       width: 45%;
       margin: 15px 0px 30px;
-      height: 600px;
+   }
+
+   .single-merch {
+      margin: 0px;
    }
 
    .merch-name {
@@ -2490,10 +2527,6 @@ textarea {
    }
 
 
-   /* .events-cont {
-      flex-direction: column-reverse;
-      height: auto;
-   } */
 
    .ev-container {
       height: auto;
@@ -2509,7 +2542,7 @@ textarea {
 
    .slider-container {
       width: 100%;
-      height: 55vh;
+      height: 80vw;
       margin: 0px;
    }
 
@@ -2703,8 +2736,17 @@ textarea {
 
    .merch {
       width: 100%;
+      height: auto;
       margin: 15px 0px 30px;
-      height: 800px;
+   }
+
+   .merch-img {
+      height: auto;
+      margin: 0px;
+   }
+
+   .merch-card {
+      height: 80vw;
    }
 
    .merch-img {
@@ -3095,13 +3137,23 @@ textarea {
 
    .merch {
       width: 100%;
+      height: auto;
       margin: 15px 0px 30px;
-      height: 600px;
+   }
+
+   .merch-img {
+      height: auto;
+      margin: 0px;
+   }
+
+   .merch-card {
+      height: 80vw;
    }
 
    .merch-outline {
       padding-bottom: 20px;
    }
+
 
    .merch-name {
       font-size: 2.8rem;
@@ -3352,9 +3404,14 @@ textarea {
    }
 
 
+
    .ev-container {
       gap: 20px;
 
+   }
+
+   .slider-container {
+      height: 55vh;
    }
 
    .event-left, .slider-container {
@@ -3406,88 +3463,6 @@ textarea {
       width: 100%;
    }
 
-}
-
-/* Add these styles to your existing style.css file */
-
-/* Card flip container */
-.merch-card {
-   position: relative;
-   width: 100%;
-   height: 100%;
-   transition: transform 0.6s;
-   transform-style: preserve-3d;
-}
-
-.merch-card.flipped {
-   transform: rotateY(180deg);
-}
-
-/* Position the front and back sides */
-.merch-front, .merch-back {
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   backface-visibility: hidden;
-   background-size: cover;
-   background-position: center;
-   border-radius: 8px;
-}
-
-/* Style the back side */
-.merch-back {
-   transform: rotateY(180deg);
-}
-
-/* Style for the flip button */
-.flip-btn {
-   position: absolute;
-   bottom: 10px;
-   right: 10px;
-   background-color: rgba(0, 0, 0, 0.7);
-   color: white;
-   border: none;
-   padding: 5px 10px;
-   border-radius: 4px;
-   cursor: pointer;
-   font-size: 0.8rem;
-   transition: background-color 0.3s;
-   z-index: 2;
-}
-
-.flip-btn:hover {
-   background-color: rgba(0, 0, 0, 0.9);
-}
-
-/* Style for the magnify button */
-.magnify-btn {
-   position: absolute;
-   top: 10px;
-   right: 10px;
-   background-color: rgba(0, 0, 0, 0.7);
-   color: white;
-   border: none;
-   width: 30px;
-   height: 30px;
-   border-radius: 50%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   cursor: pointer;
-   font-size: 1rem;
-   transition: background-color 0.3s;
-   z-index: 2;
-}
-
-.magnify-btn:hover {
-   background-color: rgba(0, 0, 0, 0.9);
-}
-
-/* Add perspective to the merch-img container */
-.merch-img {
-   position: relative;
-   perspective: 1000px;
-   cursor: pointer;
 }
 
 /* Add these styles to your existing style.css file */
@@ -3588,13 +3563,13 @@ textarea {
    }
 
    100% {
-      transform: translateX(-100%);
+      transform: translateX(-50%);
    }
 }
 
 @keyframes slideRight {
    0% {
-      transform: translateX(-100%);
+      transform: translateX(-50%);
    }
 
    100% {
@@ -3616,18 +3591,4 @@ textarea {
 
 .alt-slider-2 .slider.left {
    animation-name: slideRight;
-}
-
-.landing-img {
-   max-width: 100%;
-   /* Ensures the image does not exceed the parent's width */
-   max-height: 100%;
-   /* Ensures the image does not exceed the parent's height */
-   width: auto;
-   /* Keeps the aspect ratio */
-   height: auto;
-   display: block;
-   /* Removes extra spacing below the image */
-   object-fit: contain;
-   /* Ensures the entire image fits within the parent */
 }

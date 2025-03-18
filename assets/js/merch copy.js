@@ -110,8 +110,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
          // Determine which image to show based on current state
          const imageUrl = isFlipped && currentBack ?
-            currentBack.src :
-            currentFront ? currentFront.src : '';
+            currentBack.style.backgroundImage.replace('url("', '').replace('")', '') :
+            currentFront ? currentFront.style.backgroundImage.replace('url("', '').replace('")', '') : '';
 
          if (imageUrl) {
             window.open(imageUrl, '_blank');
