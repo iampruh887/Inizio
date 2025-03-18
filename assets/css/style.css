@@ -3600,7 +3600,7 @@ textarea {
  
  /* Adjust these selectors to match your specific slider classes */
  .alt-slider-2 .slider {
-   animation-duration: 15s; /* Increase this value to slow down the animation */
+   animation-duration: 25s; /* Increase this value to slow down the animation */
    animation-timing-function: linear;
    animation-iteration-count: infinite;
  }
@@ -3612,3 +3612,13 @@ textarea {
  .alt-slider-2 .slider.left {
    animation-name: slideRight;
  }
+ .landing-img {
+   max-width: 100%;  /* Ensures the image does not exceed the parent's width */
+   max-height: 100%; /* Ensures the image does not exceed the parent's height */
+   width: auto;      /* Keeps the aspect ratio */
+   height: auto;
+   display: block;   /* Removes extra spacing below the image */
+   object-fit: contain; /* Ensures the entire image fits within the parent */
+}
+
+ 
