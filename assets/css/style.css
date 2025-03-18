@@ -1036,6 +1036,7 @@ body {
    margin-left: 25px;
    border-radius: 15px;
    position: relative;
+   overflow: hidden;
 }
 
 .event-img-r {
@@ -1357,20 +1358,42 @@ body {
 
 /* EVENTS PAGE CODE HERE */
 
-.events-cont {
+/* .events-cont {
    display: flex;
    width: 100%;
    height: 80vh;
    padding: 0px 50px;
    margin: 50px 0px;
-}
-
+} */
+/* 
 .event-data-box {
    width: 40%;
    border-radius: 25px;
    background-color: rgb(0, 0, 0, 0.7);
    padding: 30px 20px 25px;
    margin: 0PX 15px;
+} */
+
+.event-contain {
+   padding: 40px 7vw 0px;
+}
+
+.container {
+   height: 80vh;
+   display: flex;
+   gap: 35px;
+   align-items: center;
+}
+
+/* Event Description */
+.event-left {
+   width: 40%;
+   padding: 20px;
+   height: 100%;
+   background: linear-gradient(45deg, #000000, #000000b3);
+   color: white;
+   border-radius: 25px;
+   font-size: 16px;
 }
 
 .event-data {
@@ -1400,8 +1423,6 @@ body {
    font-weight: 600;
    font-size: 1.6rem;
    line-height: 1.2;
-   /* position: absolute; */
-   /* bottom: 0px; */
    width: 100%;
 }
 
@@ -1437,36 +1458,12 @@ body {
    margin-left: 8px;
 }
 
-.event-contain {
-   padding: 40px 8vw 0px;
-}
-
-/* Main Container */
-.container {
-   height: 80vh;
-   display: flex;
-   gap: 20px;
-   align-items: center;
-}
-
-/* Event Description */
-.event-left {
-   width: 40%;
-   padding: 20px;
-   height: 100%;
-   background-color: rgb(0, 0, 0, 0.7);
-   color: white;
-   border-radius: 25px;
-   font-size: 16px;
-}
-
 /* Slider */
 .slider-container {
    position: relative;
    width: 60%;
    height: 80vh;
    border-radius: 25px;
-   margin: 0px 15px;
    overflow: hidden;
    flex-shrink: 0;
 }
@@ -1486,6 +1483,14 @@ body {
    width: 100%;
    height: 100%;
    object-fit: cover;
+}
+
+.slide-tint {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   background: linear-gradient(0deg, #000000cc, #00000000, #00000000);
+   top: 0;
 }
 
 /* Rectangular Dots - Now over the slider */
@@ -1517,7 +1522,7 @@ body {
 /* Buttons */
 .buttons {
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
    width: 100%;
    gap: 10px;
    margin-top: 40px;
@@ -1539,13 +1544,14 @@ body {
 }
 
 .slide-button.active {
-   background: black;
+   background: linear-gradient(45deg, #000000, #000000b3);
    color: white;
 }
 
 .slide-button:hover {
    font-size: 1.7rem;
 }
+
 
 /* 
 .event-poster-box {
@@ -1604,32 +1610,6 @@ body {
       left: -200%;
    }
 } */
-
-.slide-btn {
-   padding: 0px 80px;
-   display: flex;
-   justify-content: space-between;
-   width: 100%;
-}
-
-.slide-btn>button {
-   background-color: #fff5cf;
-   color: #000000;
-   font-family: roboto, sans-serif, Arial;
-   font-weight: 400;
-   text-transform: lowercase;
-   font-size: 1.5rem;
-   width: 22%;
-   height: 6vw;
-   border-radius: 20px;
-   transition: all 0.2s ease-in-out;
-}
-
-.slide-btn>button:hover {
-   font-size: 1.7rem;
-}
-
-
 
 /* CONTACTS PAGE START HERE */
 
@@ -2934,13 +2914,13 @@ textarea {
       padding: 0px 60px 15px;
    }
 
-   .slide-btn>button {
+   .slide-button {
       font-size: 1.2rem;
       border-radius: 12px;
       height: 8vw;
    }
 
-   .slide-btn>button:hover {
+   .slide-button:hover {
       font-size: 1.35rem;
    }
 
@@ -3393,14 +3373,14 @@ textarea {
       padding: 0px 4.5vw;
    }
 
-   .slide-btn>button {
+   .slide-button {
       font-size: 0.9rem;
       border-radius: 8px;
-      width: 23%;
+      width: 30%;
       height: 40px
    }
 
-   .slide-btn>button:hover {
+   .slide-button:hover {
       font-size: 0.98rem;
    }
 
@@ -3428,14 +3408,14 @@ textarea {
    height: 100%;
    transition: transform 0.6s;
    transform-style: preserve-3d;
- }
- 
- .merch-card.flipped {
+}
+
+.merch-card.flipped {
    transform: rotateY(180deg);
- }
- 
- /* Position the front and back sides */
- .merch-front, .merch-back {
+}
+
+/* Position the front and back sides */
+.merch-front, .merch-back {
    position: absolute;
    width: 100%;
    height: 100%;
@@ -3443,15 +3423,15 @@ textarea {
    background-size: cover;
    background-position: center;
    border-radius: 8px;
- }
- 
- /* Style the back side */
- .merch-back {
+}
+
+/* Style the back side */
+.merch-back {
    transform: rotateY(180deg);
- }
- 
- /* Style for the flip button */
- .flip-btn {
+}
+
+/* Style for the flip button */
+.flip-btn {
    position: absolute;
    bottom: 10px;
    right: 10px;
@@ -3464,14 +3444,14 @@ textarea {
    font-size: 0.8rem;
    transition: background-color 0.3s;
    z-index: 2;
- }
- 
- .flip-btn:hover {
+}
+
+.flip-btn:hover {
    background-color: rgba(0, 0, 0, 0.9);
- }
- 
- /* Style for the magnify button */
- .magnify-btn {
+}
+
+/* Style for the magnify button */
+.magnify-btn {
    position: absolute;
    top: 10px;
    right: 10px;
@@ -3488,20 +3468,20 @@ textarea {
    font-size: 1rem;
    transition: background-color 0.3s;
    z-index: 2;
- }
- 
- .magnify-btn:hover {
+}
+
+.magnify-btn:hover {
    background-color: rgba(0, 0, 0, 0.9);
- }
- 
- /* Add perspective to the merch-img container */
- .merch-img {
+}
+
+/* Add perspective to the merch-img container */
+.merch-img {
    position: relative;
    perspective: 1000px;
    cursor: pointer;
- }
+}
 
- /* Add these styles to your existing style.css file */
+/* Add these styles to your existing style.css file */
 
 /* Fix for speaker images */
 .slide-img {
@@ -3513,112 +3493,132 @@ textarea {
    background-repeat: no-repeat;
    border-radius: 8px;
    overflow: hidden;
- }
- 
- /* Add gradient overlay for better text visibility */
- .slide-img::after {
+}
+
+/* Add gradient overlay for better text visibility */
+.slide-img::after {
    content: '';
    position: absolute;
    bottom: 0;
    left: 0;
    width: 100%;
-   height: 70%; /* Gradient covers 70% from bottom */
-   background: linear-gradient(to top, 
-               rgba(0,0,0,0.8) 0%, 
-               rgba(0,0,0,0.7) 20%, 
-               rgba(0,0,0,0.5) 40%,
-               rgba(0,0,0,0.3) 60%,
-               rgba(0,0,0,0) 100%);
-   pointer-events: none; /* Allows clicks to pass through */
- }
- 
- /* Position text at the bottom and bring it above the gradient */
- .slide-text {
+   height: 70%;
+   /* Gradient covers 70% from bottom */
+   background: linear-gradient(to top,
+         rgba(0, 0, 0, 0.8) 0%,
+         rgba(0, 0, 0, 0.7) 20%,
+         rgba(0, 0, 0, 0.5) 40%,
+         rgba(0, 0, 0, 0.3) 60%,
+         rgba(0, 0, 0, 0) 100%);
+   pointer-events: none;
+   /* Allows clicks to pass through */
+}
+
+/* Position text at the bottom and bring it above the gradient */
+.slide-text {
    position: absolute;
    bottom: 0;
    left: 0;
    width: 100%;
    padding: 15px;
-   z-index: 2; /* Ensures text appears above gradient */
- }
- 
- /* Optional: enhance text readability further */
- .slide-name {
+   z-index: 2;
+   /* Ensures text appears above gradient */
+}
+
+/* Optional: enhance text readability further */
+.slide-name {
    color: #ffffff;
    margin-bottom: 5px;
-   text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
- }
- 
- .slide-post {
+   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.slide-post {
    color: rgba(255, 255, 255, 0.9);
    font-size: 0.9em;
-   text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
- }
+   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
 
- /* Sponsor slider image styling */
+/* Sponsor slider image styling */
 .alt-slider-2 .slide-img {
-   background-size: contain !important;  /* Makes image fit inside container without cropping */
-   background-position: center center !important;  /* Centers the image */
-   background-repeat: no-repeat !important;  /* Prevents image from repeating */
-   height: 100%;  /* Ensures the slide-img takes full height of its container */
-   width: 100%;  /* Ensures the slide-img takes full width of its container */
- }
- 
- /* Adjust the slide size for sponsor images */
- .alt-slider-2 .slide {
+   background-size: contain !important;
+   /* Makes image fit inside container without cropping */
+   background-position: center center !important;
+   /* Centers the image */
+   background-repeat: no-repeat !important;
+   /* Prevents image from repeating */
+   height: 100%;
+   /* Ensures the slide-img takes full height of its container */
+   width: 100%;
+   /* Ensures the slide-img takes full width of its container */
+}
+
+/* Adjust the slide size for sponsor images */
+.alt-slider-2 .slide {
    display: flex;
    align-items: center;
    justify-content: center;
-   height: 150px;  /* Set a consistent height for all sponsor slides */
-   padding: 15px;  /* Add some padding inside slides */
+   height: 150px;
+   /* Set a consistent height for all sponsor slides */
+   padding: 15px;
+   /* Add some padding inside slides */
    box-sizing: border-box;
- }
- 
- /* Optional: Add a subtle background to make logos with transparency more visible */
- .alt-slider-2 .slide-img {
-   background-color: rgba(255, 255, 255, 0.8);  /* Semi-transparent white background */
-   border-radius: 8px;  /* Optional: rounded corners */
- }
- /* Slower slider animation for sponsors */
-@keyframes slideLeft {
-   0% {
-     transform: translateX(0%);
-   }
-   100% {
-     transform: translateX(-100%);
-   }
- }
- 
- @keyframes slideRight {
-   0% {
-     transform: translateX(-100%);
-   }
-   100% {
-     transform: translateX(0%);
-   }
- }
- 
- /* Adjust these selectors to match your specific slider classes */
- .alt-slider-2 .slider {
-   animation-duration: 25s; /* Increase this value to slow down the animation */
-   animation-timing-function: linear;
-   animation-iteration-count: infinite;
- }
- 
- .alt-slider-2 .slider:not(.left) {
-   animation-name: slideLeft;
- }
- 
- .alt-slider-2 .slider.left {
-   animation-name: slideRight;
- }
- .landing-img {
-   max-width: 100%;  /* Ensures the image does not exceed the parent's width */
-   max-height: 100%; /* Ensures the image does not exceed the parent's height */
-   width: auto;      /* Keeps the aspect ratio */
-   height: auto;
-   display: block;   /* Removes extra spacing below the image */
-   object-fit: contain; /* Ensures the entire image fits within the parent */
 }
 
- 
+/* Optional: Add a subtle background to make logos with transparency more visible */
+.alt-slider-2 .slide-img {
+   background-color: rgba(255, 255, 255, 0.8);
+   /* Semi-transparent white background */
+   border-radius: 8px;
+   /* Optional: rounded corners */
+}
+
+/* Slower slider animation for sponsors */
+@keyframes slideLeft {
+   0% {
+      transform: translateX(0%);
+   }
+
+   100% {
+      transform: translateX(-100%);
+   }
+}
+
+@keyframes slideRight {
+   0% {
+      transform: translateX(-100%);
+   }
+
+   100% {
+      transform: translateX(0%);
+   }
+}
+
+/* Adjust these selectors to match your specific slider classes */
+.alt-slider-2 .slider {
+   animation-duration: 25s;
+   /* Increase this value to slow down the animation */
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+}
+
+.alt-slider-2 .slider:not(.left) {
+   animation-name: slideLeft;
+}
+
+.alt-slider-2 .slider.left {
+   animation-name: slideRight;
+}
+
+.landing-img {
+   max-width: 100%;
+   /* Ensures the image does not exceed the parent's width */
+   max-height: 100%;
+   /* Ensures the image does not exceed the parent's height */
+   width: auto;
+   /* Keeps the aspect ratio */
+   height: auto;
+   display: block;
+   /* Removes extra spacing below the image */
+   object-fit: contain;
+   /* Ensures the entire image fits within the parent */
+}

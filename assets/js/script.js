@@ -165,11 +165,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
    // Event Names & Descriptions
    const slideData = [
-      { name: "Opening Ceremony", text: "Gear up for an electrifying event at IIIT's fest! Teams of 4 will battle in two rounds: a quiz to secure a franchise spot, followed by a high-stakes player auction. With 100 crores, build your dream team of 12 players while balancing Indian and overseas stars. Master the bidding war, strategize your picks, and aim for the highest team rating to win. Will you outsmart the competition? Join the thrill and showcase your cricketing genius!" },
+      { name: "Event 1", text: "Gear up for an electrifying event at IIIT's fest! Teams of 4 will battle in two rounds: a quiz to secure a franchise spot, followed by a high-stakes player auction. With 100 crores, build your dream team of 12 players while balancing Indian and overseas stars. Master the bidding war, strategize your picks, and aim for the highest team rating to win. Will you outsmart the competition? Join the thrill and showcase your cricketing genius!" },
 
-      { name: "Tech Conference", text: "Unleash your creativity in this week-long Instagram marketing showdown! Teams of 4-5 will craft and run a dynamic campaign for a given product, posting daily content, reels, and stories to maximize engagement. After 6 days of strategizing and engaging, teams will pitch their campaign results to a panel of judges. Showcase your skills in analytics, content creation, and storytelling to win exciting rewards! Join the challenge and prove your marketing prowess!" },
+      { name: "Event 2", text: "Unleash your creativity in this week-long Instagram marketing showdown! Teams of 4-5 will craft and run a dynamic campaign for a given product, posting daily content, reels, and stories to maximize engagement. After 6 days of strategizing and engaging, teams will pitch their campaign results to a panel of judges. Showcase your skills in analytics, content creation, and storytelling to win exciting rewards! Join the challenge and prove your marketing prowess!" },
 
-      { name: "Closing Gala", text: "Gear up for an electrifying event at IIIT's fest! Teams of 4 will battle in two rounds: a quiz to secure a franchise spot, followed by a high-stakes player auction. With 100 crores, build your dream team of 12 players while balancing Indian and overseas stars. Master the bidding war, strategize your picks, and aim for the highest team rating to win. Will you outsmart the competition? Join the thrill and showcase your cricketing genius!" }
+      { name: "Event 3", text: "Gear up for an electrifying event at IIIT's fest! Teams of 4 will battle in two rounds: a quiz to secure a franchise spot, followed by a high-stakes player auction. With 100 crores, build your dream team of 12 players while balancing Indian and overseas stars. Master the bidding war, strategize your picks, and aim for the highest team rating to win. Will you outsmart the competition? Join the thrill and showcase your cricketing genius!" }
    ];
 
    function startAutoSlide() {
@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
          const button = document.createElement("button");
          button.classList.add("slide-button");
-         button.textContent = slideData[i].name;
+         button.textContent = `Event ${i+1}`;
          button.addEventListener("click", () => {
             currentIndex = i + 1;
             updateSlider();
@@ -259,27 +259,27 @@ document.addEventListener("DOMContentLoaded", function () {
    const sliders = document.querySelectorAll(".slider");
 
    sliders.forEach(slider => {
-       let slides = Array.from(slider.children);
-       let totalSlides = slides.length;
+      let slides = Array.from(slider.children);
+      let totalSlides = slides.length;
 
-       // Clone slides to create the infinite loop effect
-       slides.forEach(slide => {
-           let clone = slide.cloneNode(true);
-           slider.appendChild(clone);
-       });
+      // Clone slides to create the infinite loop effect
+      slides.forEach(slide => {
+         let clone = slide.cloneNode(true);
+         slider.appendChild(clone);
+      });
 
-       let scrollAmount = 0;
-       const speed = 2; // Adjust speed for smoother movement
+      let scrollAmount = 0;
+      const speed = 2; // Adjust speed for smoother movement
 
-       function moveSlider() {
-           scrollAmount += speed;
-           if (scrollAmount >= slider.scrollWidth / totalSlides) {
-               scrollAmount = 0; // Reset to maintain seamless effect
-           }
-           slider.style.transform = `translateX(-${scrollAmount}px)`;
-       }
+      function moveSlider() {
+         scrollAmount += speed;
+         if (scrollAmount >= slider.scrollWidth / totalSlides) {
+            scrollAmount = 0; // Reset to maintain seamless effect
+         }
+         slider.style.transform = `translateX(-${scrollAmount}px)`;
+      }
 
-       setInterval(moveSlider, 30); // Controls animation speed
+      setInterval(moveSlider, 30); // Controls animation speed
    });
 });
 
