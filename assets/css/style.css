@@ -355,10 +355,8 @@ body {
 
 
 /* BODY OF PAGE BEGINS HERE */
-
 /*SPONSOR PAGE CLASSES*/
 
-/* Orange Banner Starts */
 .banner {
    background-color: #ff6b00;
    background-image: url('../images/common/bg.svg');
@@ -409,7 +407,6 @@ body {
    margin: 20px 20px 0px;
    width: 60vw;
 }
-
 
 .home-banner {
    height: calc(85vh + 25px);
@@ -489,6 +486,7 @@ body {
 
 .pass-btn {
    padding: 10px 30px;
+   color: #000000;
    font-family: Roboto, sans-serif;
    font-size: 1.2rem;
    font-weight: 600;
@@ -538,9 +536,7 @@ body {
 }
 
 
-
 /* TEAMS PAGE STARTS HERE */
-
 
 .team-banner {
    height: 112vh;
@@ -690,7 +686,6 @@ body {
    font-weight: 300;
    text-transform: lowercase;
    line-height: 1;
-   /* white-space: nowrap; */
 }
 
 .mem-post {
@@ -752,10 +747,7 @@ body {
    background-clip: text;
 }
 
-
 /* TEAMS PAGE ENDS HERE */
-
-/* Orange Banner Ends */
 
 
 /* sponsors list Starts */
@@ -786,7 +778,7 @@ body {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   padding: 100px 10px 0px;
+   padding: 40px 10px 0px;
    transition: all 0.1s ease-in-out;
 }
 
@@ -826,15 +818,20 @@ body {
 }
 
 .spon-img {
-   height: 22vw;
-   width: 26vw;
-   min-height: 220px;
-   min-width: 250px;
+   width: 25vw;
+   aspect-ratio: 8/9;
    margin-top: 30px;
    cursor: pointer;
    border-radius: 12px;
-   background: url('../images/common/Sponsor.png') no-repeat center;
+   /* background: url('../images/common/Sponsor.png') no-repeat center; */
    background-size: 200%;
+   overflow: hidden;
+}
+
+.sponsor-img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
 }
 
 .spon-name {
@@ -1377,62 +1374,6 @@ body {
    border-radius: 25px;
 }
 
-.slider {
-   position: absolute;
-   overflow: hidden;
-   white-space: nowrap;
-   animation: scroll-r 10s linear infinite;
-   font-size: 0;
-   height: 100%;
-   padding: 3vw 0px;
-   display: flex;
-}
-
-.left {
-   animation: scroll-l 10s linear infinite;
-}
-
-.slide {
-   width: 25vw;
-   align-items: baseline;
-   padding: 0px 2.4vw;
-   font-size: initial;
-   height: 100%;
-}
-
-.slide-img {
-   border: 4px solid #fff5cf;
-   background-color: #232323;
-   width: 100%;
-   height: 100%;
-   border-radius: 13px;
-   padding: 15px;
-}
-
-.slide-text {
-   width: 100%;
-   height: 100%;
-   color: #ffffff;
-   display: flex;
-   flex-direction: column;
-   justify-content: end;
-}
-
-.slide-name {
-   font-size: 1.5rem;
-   font-family: Roboto, sans-serif;
-   font-weight: 600;
-   margin: 5px 10px;
-}
-
-.slide-post {
-   font-size: 1rem;
-   font-family: Roboto, sans-serif;
-   font-weight: 400;
-   margin: 0px 10px 15px;
-   letter-spacing: 1px;
-}
-
 
 @keyframes scroll-l {
    0% {
@@ -1454,6 +1395,90 @@ body {
    }
 }
 
+
+.slider {
+   position: absolute;
+   overflow: hidden;
+   white-space: nowrap;
+   animation: scroll-r 10s linear infinite;
+   font-size: 0;
+   height: 100%;
+   padding: 3vw 0px;
+   display: flex;
+}
+
+.left {
+   animation: scroll-l 10s linear infinite;
+}
+
+.spon-slide-right {
+   animation: scroll-r 20s linear infinite;
+}
+
+.spon-slide-left {
+   animation: scroll-l 15s linear infinite;
+}
+
+.slide {
+   width: 25vw;
+   align-items: baseline;
+   padding: 0px 2.4vw;
+   font-size: initial;
+   height: 100%;
+}
+
+.slide-img {
+   border: 4px solid #fff5cf;
+   background-color: #232323;
+   width: 100%;
+   height: 100%;
+   border-radius: 8px;
+   overflow: hidden;
+   position: relative;
+}
+
+
+.slide-img>img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   /* object-position: 50% 60%; */
+}
+
+
+.spon-slide-img {
+   background-color: #ffffff;
+   object-fit: contain !important;
+}
+
+
+.slide-text {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   color: #ffffff;
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
+}
+
+
+.slide-name {
+   font-size: 1.5rem;
+   font-family: Roboto, sans-serif;
+   font-weight: 600;
+   margin: 5px 20px;
+}
+
+.slide-post {
+   font-size: 1rem;
+   font-family: Roboto, sans-serif;
+   font-weight: 400;
+   margin: 0px 20px 20px;
+   letter-spacing: 1px;
+}
 
 /* EVENTS PAGE STARTS HERE */
 
@@ -2024,12 +2049,10 @@ textarea {
 
    .slide-name {
       font-size: 1.35rem;
-      margin: 5px 6px;
    }
 
    .slide-post {
       font-size: 0.9rem;
-      margin: 0px 6px 8px;
    }
 
 
@@ -2287,7 +2310,7 @@ textarea {
       padding: 0px 10px 40px;
    }
 
-   .merch-card{
+   .merch-card {
       height: 35vw;
    }
 
@@ -2360,31 +2383,35 @@ textarea {
    }
 
    .slider {
-      animation: scroll-r 30s linear infinite;
+      animation: scroll-r 15s linear infinite;
       padding: 30px 0px;
    }
 
    .left {
-      animation: scroll-l 30s linear infinite;
+      animation: scroll-l 15s linear infinite;
    }
+
+
+   .spon-slide-right {
+      animation: scroll-r 20s linear infinite !important;
+   }
+
+   .spon-slide-left {
+      animation: scroll-l 15s linear infinite !important;
+   }
+
 
    .slide {
       width: 32vw;
       padding: 0px 30px;
    }
 
-   .slide-img {
-      padding: 15px;
-   }
-
    .slide-name {
       font-size: 1.4rem;
-      margin: 5px 6px;
    }
 
    .slide-post {
       font-size: 1rem;
-      margin: 0px 6px 10px;
    }
 
 
@@ -2785,11 +2812,19 @@ textarea {
    }
 
    .slider {
-      animation: scroll-r 25s linear infinite;
+      animation: scroll-r 12s linear infinite;
    }
 
    .left {
-      animation: scroll-l 25s linear infinite;
+      animation: scroll-l 10s linear infinite;
+   }
+
+   .spon-slide-right {
+      animation: scroll-r 20s linear infinite !important;
+   }
+
+   .spon-slide-left {
+      animation: scroll-l 15s linear infinite !important;
    }
 
    .slide {
@@ -2797,19 +2832,12 @@ textarea {
       padding: 0px 15px;
    }
 
-   .slide-img {
-      border-radius: 12px;
-      padding: 10px 15px;
-   }
-
    .slide-name {
       font-size: 1.2rem;
-      margin: 0;
    }
 
    .slide-post {
       font-size: 0.85rem;
-      margin: 5px 0px;
    }
 
 
@@ -3206,16 +3234,16 @@ textarea {
    }
 
    .alt-slider-2 {
-      height: 70vw;
+      height: 80vw;
       margin: 40px 0px 30px;
    }
 
    .slider-2>.slider {
-      padding: 5px 0px;
+      padding: 4px 0px;
    }
 
    .slider-2>.slider>.slide {
-      padding: 0px 8px;
+      padding: 5px 12px;
    }
 
    .slider-2>.slider>.slide>.slide-img {
@@ -3223,12 +3251,19 @@ textarea {
    }
 
    .slider {
-      animation: scroll-r 20s linear infinite;
-      padding: 20px 0px;
+      animation: scroll-r 12s linear infinite;
    }
 
    .left {
-      animation: scroll-l 20s linear infinite;
+      animation: scroll-l 10s linear infinite;
+   }
+
+   .spon-slide-right {
+      animation: scroll-r 20s linear infinite !important;
+   }
+
+   .spon-slide-left {
+      animation: scroll-l 20s linear infinite !important;
    }
 
    .slide {
@@ -3237,19 +3272,18 @@ textarea {
    }
 
    .slide-img {
-      border-radius: 12px;
-      padding: 8px 12px;
       border-width: 2px;
    }
 
    .slide-name {
       font-size: 1.2rem;
+      margin: 5px 15px;
    }
 
    .slide-post {
       font-size: 0.85rem;
-      margin: 5px 0px;
       letter-spacing: 0px;
+      margin: 0px 15px 20px;
    }
 
    .home-banner {
@@ -3464,132 +3498,3 @@ textarea {
    }
 
 }
-
-/* Add these styles to your existing style.css file */
-
-/* Fix for speaker images */
-.slide-img {
-   position: relative;
-   width: 100%;
-   height: 100%;
-   background-size: cover;
-   background-position: center;
-   background-repeat: no-repeat;
-   border-radius: 8px;
-   overflow: hidden;
-}
-
-/* Add gradient overlay for better text visibility */
-.slide-img::after {
-   content: '';
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   width: 100%;
-   height: 70%;
-   /* Gradient covers 70% from bottom */
-   background: linear-gradient(to top,
-         rgba(0, 0, 0, 0.8) 0%,
-         rgba(0, 0, 0, 0.7) 20%,
-         rgba(0, 0, 0, 0.5) 40%,
-         rgba(0, 0, 0, 0.3) 60%,
-         rgba(0, 0, 0, 0) 100%);
-   pointer-events: none;
-   /* Allows clicks to pass through */
-}
-
-/* Position text at the bottom and bring it above the gradient */
-.slide-text {
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   width: 100%;
-   padding: 15px;
-   z-index: 2;
-   /* Ensures text appears above gradient */
-}
-
-/* Optional: enhance text readability further */
-.slide-name {
-   color: #ffffff;
-   margin-bottom: 5px;
-   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.slide-post {
-   color: rgba(255, 255, 255, 0.9);
-   font-size: 0.9em;
-   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-/* Sponsor slider image styling */
-.alt-slider-2 .slide-img {
-   background-size: contain !important;
-   /* Makes image fit inside container without cropping */
-   background-position: center center !important;
-   /* Centers the image */
-   background-repeat: no-repeat !important;
-   /* Prevents image from repeating */
-   height: 100%;
-   /* Ensures the slide-img takes full height of its container */
-   width: 100%;
-   /* Ensures the slide-img takes full width of its container */
-}
-
-/* Adjust the slide size for sponsor images */
-.alt-slider-2 .slide {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   height: 150px;
-   /* Set a consistent height for all sponsor slides */
-   padding: 15px;
-   /* Add some padding inside slides */
-   box-sizing: border-box;
-}
-
-/* Optional: Add a subtle background to make logos with transparency more visible */
-.alt-slider-2 .slide-img {
-   background-color: rgba(255, 255, 255, 0.8);
-   /* Semi-transparent white background */
-   border-radius: 8px;
-   /* Optional: rounded corners */
-}
-
-/* Slower slider animation for sponsors */
-@keyframes slideLeft {
-   0% {
-      transform: translateX(0%);
-   }
-
-   100% {
-      transform: translateX(-50%);
-   }
-}
-
-@keyframes slideRight {
-   0% {
-      transform: translateX(-50%);
-   }
-
-   100% {
-      transform: translateX(0%);
-   }
-}
-
-/* Adjust these selectors to match your specific slider classes */
-.alt-slider-2 .slider {
-   animation-duration: 25s;
-   /* Increase this value to slow down the animation */
-   animation-timing-function: linear;
-   animation-iteration-count: infinite;
-}
-
-.alt-slider-2 .slider:not(.left) {
-   animation-name: slideLeft;
-}
-
-.alt-slider-2 .slider.left {
-   animation-name: slideRight;
-}
-

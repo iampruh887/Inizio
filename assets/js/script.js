@@ -30,6 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
    });
 });
 
+
+// NAV BAR VISIBLE ON SCROOL UP
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
    var currentScrollPos = window.pageYOffset;
@@ -42,6 +44,8 @@ window.onscroll = function () {
 }
 
 
+
+// LAZY IMAGE LODER
 
 document.addEventListener("DOMContentLoaded", function () {
    var lazyloadImages;
@@ -150,6 +154,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+
+//EVENTS SLIDER
 
 document.addEventListener("DOMContentLoaded", () => {
    const slides = document.querySelector(".slides");
@@ -292,8 +298,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// MERCH FLIPPING 
-
+// MERCH FLIPPING
 
 document.addEventListener('DOMContentLoaded', function () {
    // Get all merch image containers
