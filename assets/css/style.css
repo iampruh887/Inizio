@@ -1281,7 +1281,7 @@ body {
    position: absolute;
    overflow: hidden;
    white-space: nowrap;
-   animation: scroll-r 40s linear infinite;
+   animation: scroll-r 10s linear infinite;
    font-size: 0;
    height: 100%;
    padding: 3vw 0px;
@@ -1289,7 +1289,7 @@ body {
 }
 
 .left {
-   animation: scroll-l 40s linear infinite;
+   animation: scroll-l 10s linear infinite;
 }
 
 .slide {
@@ -3418,3 +3418,197 @@ textarea {
    }
 
 }
+
+/* Add these styles to your existing style.css file */
+
+/* Card flip container */
+.merch-card {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   transition: transform 0.6s;
+   transform-style: preserve-3d;
+ }
+ 
+ .merch-card.flipped {
+   transform: rotateY(180deg);
+ }
+ 
+ /* Position the front and back sides */
+ .merch-front, .merch-back {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   backface-visibility: hidden;
+   background-size: cover;
+   background-position: center;
+   border-radius: 8px;
+ }
+ 
+ /* Style the back side */
+ .merch-back {
+   transform: rotateY(180deg);
+ }
+ 
+ /* Style for the flip button */
+ .flip-btn {
+   position: absolute;
+   bottom: 10px;
+   right: 10px;
+   background-color: rgba(0, 0, 0, 0.7);
+   color: white;
+   border: none;
+   padding: 5px 10px;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 0.8rem;
+   transition: background-color 0.3s;
+   z-index: 2;
+ }
+ 
+ .flip-btn:hover {
+   background-color: rgba(0, 0, 0, 0.9);
+ }
+ 
+ /* Style for the magnify button */
+ .magnify-btn {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   background-color: rgba(0, 0, 0, 0.7);
+   color: white;
+   border: none;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   font-size: 1rem;
+   transition: background-color 0.3s;
+   z-index: 2;
+ }
+ 
+ .magnify-btn:hover {
+   background-color: rgba(0, 0, 0, 0.9);
+ }
+ 
+ /* Add perspective to the merch-img container */
+ .merch-img {
+   position: relative;
+   perspective: 1000px;
+   cursor: pointer;
+ }
+
+ /* Add these styles to your existing style.css file */
+
+/* Fix for speaker images */
+.slide-img {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   border-radius: 8px;
+   overflow: hidden;
+ }
+ 
+ /* Add gradient overlay for better text visibility */
+ .slide-img::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 70%; /* Gradient covers 70% from bottom */
+   background: linear-gradient(to top, 
+               rgba(0,0,0,0.8) 0%, 
+               rgba(0,0,0,0.7) 20%, 
+               rgba(0,0,0,0.5) 40%,
+               rgba(0,0,0,0.3) 60%,
+               rgba(0,0,0,0) 100%);
+   pointer-events: none; /* Allows clicks to pass through */
+ }
+ 
+ /* Position text at the bottom and bring it above the gradient */
+ .slide-text {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   padding: 15px;
+   z-index: 2; /* Ensures text appears above gradient */
+ }
+ 
+ /* Optional: enhance text readability further */
+ .slide-name {
+   color: #ffffff;
+   margin-bottom: 5px;
+   text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+ }
+ 
+ .slide-post {
+   color: rgba(255, 255, 255, 0.9);
+   font-size: 0.9em;
+   text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+ }
+
+ /* Sponsor slider image styling */
+.alt-slider-2 .slide-img {
+   background-size: contain !important;  /* Makes image fit inside container without cropping */
+   background-position: center center !important;  /* Centers the image */
+   background-repeat: no-repeat !important;  /* Prevents image from repeating */
+   height: 100%;  /* Ensures the slide-img takes full height of its container */
+   width: 100%;  /* Ensures the slide-img takes full width of its container */
+ }
+ 
+ /* Adjust the slide size for sponsor images */
+ .alt-slider-2 .slide {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 150px;  /* Set a consistent height for all sponsor slides */
+   padding: 15px;  /* Add some padding inside slides */
+   box-sizing: border-box;
+ }
+ 
+ /* Optional: Add a subtle background to make logos with transparency more visible */
+ .alt-slider-2 .slide-img {
+   background-color: rgba(255, 255, 255, 0.8);  /* Semi-transparent white background */
+   border-radius: 8px;  /* Optional: rounded corners */
+ }
+ /* Slower slider animation for sponsors */
+@keyframes slideLeft {
+   0% {
+     transform: translateX(0%);
+   }
+   100% {
+     transform: translateX(-100%);
+   }
+ }
+ 
+ @keyframes slideRight {
+   0% {
+     transform: translateX(-100%);
+   }
+   100% {
+     transform: translateX(0%);
+   }
+ }
+ 
+ /* Adjust these selectors to match your specific slider classes */
+ .alt-slider-2 .slider {
+   animation-duration: 15s; /* Increase this value to slow down the animation */
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+ 
+ .alt-slider-2 .slider:not(.left) {
+   animation-name: slideLeft;
+ }
+ 
+ .alt-slider-2 .slider.left {
+   animation-name: slideRight;
+ }
