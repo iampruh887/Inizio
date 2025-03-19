@@ -3498,3 +3498,43 @@ textarea {
    }
 
 }
+.sponsor-type {
+   display: flex;
+   flex-direction: column;
+   align-items: center; /* Center the entire section */
+   text-align: center;
+   width: 100%;
+}
+
+.spon-list {
+   display: flex;
+   justify-content: center; /* Centers sponsor images */
+   flex-wrap: wrap; /* Ensures responsiveness */
+   gap: 30px; /* Space between sponsors */
+   max-width: 80vw; /* Ensures they don’t spread too much */
+   margin: 0 auto; /* Centers horizontally */
+}
+
+.spon {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.spon-img {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 200px; /* Restricts max size */
+   height: 200px;
+   overflow: hidden;
+   border-radius: 12px;
+   background-color: #fff; /* Background for contrast */
+}
+
+.sponsor-img {
+   max-width: 100%;
+   max-height: 100%;
+   object-fit: contain; /* Ensures full containment */
+}
