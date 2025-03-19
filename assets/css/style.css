@@ -1514,9 +1514,8 @@ body {
 .event-para {
    font-family: lexend, arial, sans-serif;
    font-weight: 200;
-   font-size: 1rem;
+   font-size: 1.2rem;
    line-height: 1.6;
-   text-transform: uppercase;
    color: #fff5cf;
    margin-bottom: 20px;
    overflow: hidden;

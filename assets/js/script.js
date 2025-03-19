@@ -188,7 +188,9 @@ document.addEventListener("DOMContentLoaded", () => {
       clearInterval(autoSlideInterval);
       autoSlideInterval = setInterval(nextSlide, 5000);
    }
-
+   function stopAutoSlide() {
+      clearInterval(autoSlideInterval);
+   }
    function updateSlider(instant = false) {
       slides.style.transition = instant ? "none" : "transform 0.5s ease-in-out";
       slides.style.transform = `translateX(-${currentIndex * 100}%)`;
@@ -227,7 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
          button.addEventListener("click", () => {
             currentIndex = i + 1;
             updateSlider();
-            startAutoSlide();
+            stopAutoSlide();
          });
          buttonsContainer.appendChild(button);
       }
